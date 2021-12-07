@@ -2,7 +2,7 @@
 <html>
  	<head>
 	    <link rel="stylesheet" href="css/login.css" />
-	    <title>E-Learning</title>
+	    <title>Inventory Barang</title>
 </head>
 <body>
 	<div class="container">
