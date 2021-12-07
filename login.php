@@ -1,63 +1,81 @@
-<!doctype html>
-<html lang="en">
-  <head>
-  	<title>Inventory Barang</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="css/style.css">
-
-	</head>
-	<body>
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Inventory Barang</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-6 col-lg-5">
-					<div class="login-wrap p-4 p-md-5">
-		      	<div class="icon d-flex align-items-center justify-content-center">
-		      		<span class="fa fa-user-o"></span>
-		      	</div>
-				<form action="#" class="login-form">
-					<div class="form-group">
-						<input type="text" class="form-control rounded-left" placeholder="Username" required>
-					</div>
-					<div class="form-group d-flex">
-						<input type="password" class="form-control rounded-left" placeholder="Password" required>
-					</div>
-					<div class="form-group d-md-flex">
-						<div class="w-50">
-							<label class="checkbox-wrap checkbox-primary">Remember Me
-								<input type="checkbox" checked>
-								<span class="checkmark"></span>
-							</label>
-						</div>			
-	            </div>
-	            <div class="form-group">
-	            	<button type="submit" class="btn btn-primary rounded submit p-3 px-5">Login</button>
-	            </div>
-	          </form>
-	        </div>
-				</div>
+<!DOCTYPE html>
+<html>
+ 	<head>
+	    <link rel="stylesheet" href="css/login.css" />
+	    <title>Inventory Barang</title>
+</head>
+<body>
+	<div class="container">
+		<div class="forms-container">
+        	<div class="signin-signup">
+          		<form action="" method="post" class="sign-in-form">
+	            	<h2 class="title">Masuk</h2>
+		            <div class="input-field">
+		            	<i class="fas fa-user"></i>
+		              	<input type="text" name="id" placeholder="NIS" required />
+		            </div>
+		            <div class="input-field">
+		              	<i class="fas fa-lock"></i>
+		              	<input type="password" name="password" placeholder="Kata Sandi" required />
+		            </div>
+					<button type="submit" name="signIn" class="btn">Masuk</button>
+		        </form>
+	          	<form action="" method="post" class="sign-up-form" >
+		            <h2 class="title">Daftar</h2>
+		            <div class="form-check form-check-inline text-white">
+		              	<input class="form-check-input" type="radio" name="user" id="guru" value="Guru" required>
+						<label for="guru" style="color: white; margin-right: 20px;">Pemilik</label>
+						<input class="form-check-input" type="radio" name="user" id="siswa" value="Siswa" required>
+						<label for="siswa" style="color: white;">Admin</label>
+		            </div>
+					<div class="input-field">
+		              	<i class="fas fa-user"></i>
+		              	<input type="text" name="id" placeholder="ID" required/>
+		            </div>
+		            <div class="input-field">
+		              	<i class="fas fa-lock"></i>
+		              	<input type="password" name="password" placeholder="Password" required/>
+		            </div>
+		            <div class="input-field">
+		              	<i class="fas fa-user"></i>
+		              	<input type="text" name="nama" placeholder="Nama Lengkap" required/>
+		            </div>
+		            <div class="input-field">
+		              	<i class="fa fa-venus-mars"></i>
+		              	<input type="text" name="jk" placeholder="Jenis Kelamin (L/P)" required/>
+		            </div>
+		            <div class="input-field">
+		              	<i class="fab fa-whatsapp"></i>
+		              	<input type="text" name="wa" placeholder="Whatsapp" required/>
+		            </div>
+		            <div class="input-field">
+		              	<i class="fas fa-map-marker"></i>
+		              	<input type="text" name="alamat" placeholder="Alamat" required/>
+		            </div>
+					<button type="submit" name="signUp" class="btn">Daftar</button>
+          		</form>
 			</div>
 		</div>
-	</section>
-
-	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
-
-	</body>
+		<div class="panels-container">
+        	<div class="panel left-panel">
+          		<div class="content">
+	            	<h3>Belum Punya Akun ?</h3>
+	            	<p>Inventory Barang</p>
+	            	<button class="btn transparent" id="sign-up-btn">Daftar</button>
+          		</div>
+        		<img src="img/log.svg" class="image" alt="" />
+        	</div>
+        	<div class="panel right-panel">
+          		<div class="content">
+	            	<h3>Sudah Punya Akun ?</h3>
+	            	<p>Inventory Barang</p>
+	            	<button class="btn transparent" id="sign-in-btn">Masuk</button>
+          		</div>
+          		<img src="img/register.svg" class="image" alt="" />
+        	</div>
+		</div>
+	</div>
+<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+<script src="js/login.js"></script>
+</body>
 </html>
-
->>>>>>> 4ad1f5dc1e34f468490357a7d65388f329fe678d
