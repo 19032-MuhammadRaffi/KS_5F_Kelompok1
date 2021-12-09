@@ -10,6 +10,7 @@
         header("Location: #");
         exit;
     }
+	// Ke login.php
     else{
         header("Location: login.php");
         exit;
