@@ -11,6 +11,52 @@
 
 <body>
     <!-- form input -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+<!-- form input -->
+<!-- coba doang lah ya -->
+
     <div class="container">
         <div class="row my-4">
             <h3 class="fs-4 text-center mb-4">Tambah Data Laptop</h3>
