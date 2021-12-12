@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Dashboard</title>
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="bootstrap-icons-1.7.2/bootstrap-icons.css">
+
+    <style>
+      #sidebarMenu{
+        background: #c4dce4;
+        min-height: 100vh;
+      }
+      .active{
+        color: #0773c4;
+        font-weight: 700;
+      }
+      .nav-link{
+        color: #0773c4;
+      }
+      .text-blue{
+        color: #15b8fc;
+      }      
+      thead>tr{
+        background: #055693;
+      }
+      tbody>tr:nth-of-type(odd){
+        background: #c4dce4;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="container-fluid">
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+          <div class="position-fixed pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <i class="bi bi-house me-2"></i>
+                  <span>Dashboard</span>              
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="input-data-laptop.html">
+                  <i class="bi bi-clipboard-plus me-2"></i>
+                  <span>Kelola Data Laptop</span>
+                </a>
+              </li>               
+              <li class="nav-item">
+                <a class="nav-link" href="data-laptop.html">
+                  <i class="bi bi-laptop me-2"></i>
+                  <span>Data Laptop</span>                  
+                </a>
+              </li>                           
+              <li class="nav-item">
+                <a class="nav-link" href="barang-masuk.html">
+                  <i class="bi bi-box-arrow-in-down me-2"></i>
+                  <span>Barang Masuk</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="barang-keluar.html">
+                  <i class="bi bi-box-arrow-up me-2"></i>
+                  <span>Barang Keluar</span>                  
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="table.html">
+                  <i class="bi bi-clock-history me-2"></i>
+                  <span>Riwayat Transaksi</span>                  
+                </a>
+              </li>
+            </ul>
+            <hr/>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="buat-user.html">
+                  <i class="bi bi-person-plus me-2"></i>
+                  <span>Kelola User</span>                  
+                </a>
+              </li>          
+              <li class="nav-item">
+                <a class="nav-link" href="data-user.html">
+                  <i class="bi bi-people me-2"></i>
+                  <span>Data User</span>
+                </a>
+              </li>
+              <hr/>
+              <li class="nav-item fixed-bottom">
+                <a class="nav-link" href="#">
+                  <i class="bi bi-door-open me-2"></i>
+                  <span>Keluar</span>                
+                </a>
+              </li>          
+            </ul>
+          </div>
+          </nav>
+        <main class="col-md-9 min-vh-100 ms-sm-auto col-lg-10 px-md-4" style="background: #016b97;">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-2 border-bottom">
+            <h1 class="h1 text-white">Dashboard</h1>
+          </div>
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3">
+            <div class="col">
+              <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-none" style="background: rgba(108,207,252,0.9);">
+                <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-1">
+                  <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Stok Laptop</h2>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <div class="icon">
+                        <i class="bi bi-collection-fill"></i>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center me-3">
+                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                      <small>Total</small>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                      <small>520</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-none" style="background:rgba(108,207,252);">
+                <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1">
+                  <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Total Type</h2>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <div class="icon">
+                        <i class="bi bi-laptop"></i>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center me-3">
+                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                      <small>Total</small>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                      <small>50</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>
