@@ -1,5 +1,5 @@
 html,body{
-    background-image: url('img/Background.jpg');
+    background-image: url('https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_960_720.jpg');
     height: 100%;
 }
 .wrapper{
@@ -9,6 +9,7 @@ html,body{
     background-color: white;
     padding: 4rem 2rem 4rem 2rem;
     border-radius: 1rem;
+    width: 60%;
 }
 .form-control{
     display: block;
@@ -27,21 +28,6 @@ html,body{
     border-color: white;
     outline: 0;
     box-shadow: none;
-}
-.btn-menu-active{
-    border-bottom: 2px solid #5fbae9;
-    margin-bottom: 1.5rem;
-    width: 100%;
-    max-width: 48%;
-}
-.btn-menu-inactive{
-    color: #999;
-    margin-bottom: 1.5rem;
-    width: 100%;
-    max-width: 49%;
-}
-.btn-menu-inactive:hover{
-    border-bottom: 2px solid #5fbae9;
 }
 .btn-class{
     width: 100%;

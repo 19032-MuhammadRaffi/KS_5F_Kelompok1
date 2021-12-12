@@ -41,7 +41,7 @@
                             </li>
                             <hr>
                             <li class="nav-item fixed-bottom">
-                                <a class="nav-link fw-bold warna-2" href="#"><i class="bi bi-door-open me-2"></i><span>Keluar</span></a>
+                                <a class="nav-link fw-bold warna-2" href="../logout.php"><i class="bi bi-door-open me-2"></i><span>Keluar</span></a>
                             </li>          
                         </ul>
                     </div>

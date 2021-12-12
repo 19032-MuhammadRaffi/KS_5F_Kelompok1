@@ -3,11 +3,11 @@
 	// Cek Session
     session_start();
     if (isset($_SESSION["Admin"])){
-        header("Location: #");
+        header("Location: admin/index.php");
         exit;
     }
     else if (isset($_SESSION["Staff"])){
-        header("Location: #");
+        header("Location: staff/index.php");
         exit;
     }
     else{

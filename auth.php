@@ -1,11 +1,10 @@
 <?php
     require 'koneksi.php';
-//test 123
 // SIGN IN
     if (isset($_POST["signIn"])){
         $id_user = $_POST["id_user"];
         $pass = $_POST["password"];
-        $signin = "SELECT * FROM user WHERE id_user='$id_user' AND password=md5('$pass')";
+        $signin = "SELECT * FROM user WHERE id_user='$id_user' AND password=SHA1('$pass')";
         $result = mysqli_query($koneksi, $signin);
         
         if(mysqli_num_rows($result) === 1){
@@ -15,12 +14,12 @@
 				session_start();
 				$_SESSION['id_user'] = $_POST["id_user"];
                 if ($row["hak_akses"]=="Admin"){
-                    $_SESSION["Pemilik"] = true;
-                    header("Location:pemilik/index.php");
+                    $_SESSION["Admin"] = true;
+                    header("Location:admin/index.php");
                 }
                 else if ($row["hak_akses"]=="Staff"){
-                    $_SESSION["Teller"] = true;
-                    header("Location:teller/index.php");
+                    $_SESSION["Staff"] = true;
+                    header("Location:staff/index.php");
                 }
                 exit;
             }
