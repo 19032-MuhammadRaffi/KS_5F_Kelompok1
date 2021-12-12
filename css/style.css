@@ -1,0 +1,38 @@
+.bg-1{
+    background-color: #15b8fc;
+}
+.bg-2{
+    background-color: #6ccffc;
+}
+.bg-3{
+    background-color: #0773c4;
+}
+.bg-4{
+    background-color: #016b97;
+}
+.bg-5{
+    background-color: #c4dce4;
+}
+.bg-6{
+    background-color: #055693;
+}
+.warna-1{
+    color: #15b8fc;
+}
+.warna-2{
+    color: white;
+}
+#sidebarMenu{
+    background: #016b97;
+    min-height: 100vh;
+}
+.active{
+    color: #15b8fc;
+    font-weight: 700;
+}    
+thead>tr{
+    background: #055693;
+}
+tbody>tr:nth-of-type(odd){
+    background: #c4dce4;
+}
