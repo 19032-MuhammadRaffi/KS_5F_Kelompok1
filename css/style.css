@@ -52,6 +52,12 @@
 #page-content-wrapper {
     min-width: 100vw;
 }
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+#menu-toggle {
+    cursor: pointer;
+}
 #sidebarMenu{
     background: #016b97;
     min-height: 100vh;
