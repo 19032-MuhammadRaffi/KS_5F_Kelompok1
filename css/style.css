@@ -25,6 +25,10 @@
 .warna-3{
   color: #016b97;
 }
+.active-bar {
+  color: black;
+  background-color: white;
+}
 #sidebarMenu{
     background: #016b97;
     min-height: 100vh;
