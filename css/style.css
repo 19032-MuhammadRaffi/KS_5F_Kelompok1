@@ -68,6 +68,9 @@
     font-weight: bold;
     border: none;
 }
+.list-group-item.hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
 #sidebarMenu{
     background: #016b97;
     min-height: 100vh;
