@@ -46,6 +46,12 @@
     -o-transition: margin 0.25s ease-out;
     transition: margin 0.25s ease-out;
 }
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+#page-content-wrapper {
+    min-width: 100vw;
+}
 #sidebarMenu{
     background: #016b97;
     min-height: 100vh;
