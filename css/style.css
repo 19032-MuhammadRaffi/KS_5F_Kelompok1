@@ -38,6 +38,14 @@
 #wrapper {
     overflow-x: hidden;
 }
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin 0.25s ease-out;
+    -moz-transition: margin 0.25s ease-out;
+    -o-transition: margin 0.25s ease-out;
+    transition: margin 0.25s ease-out;
+}
 #sidebarMenu{
     background: #016b97;
     min-height: 100vh;
