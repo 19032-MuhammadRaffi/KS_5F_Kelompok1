@@ -32,6 +32,12 @@
 .rounded-full {
     border-radius: 100%;
 }
+.btnInput{
+  width: 170px;
+}
+#wrapper {
+    overflow-x: hidden;
+}
 #sidebarMenu{
     background: #016b97;
     min-height: 100vh;
