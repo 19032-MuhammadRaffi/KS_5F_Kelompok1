@@ -58,6 +58,16 @@
 #menu-toggle {
     cursor: pointer;
 }
+.list-group-item {
+    border: none;
+    padding: 20px 30px;
+}
+.list-group-item.active {
+    background-color: transparent;
+    color: #276678;
+    font-weight: bold;
+    border: none;
+}
 #sidebarMenu{
     background: #016b97;
     min-height: 100vh;
