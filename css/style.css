@@ -71,6 +71,19 @@
 .list-group-item.hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+
+    #page-content-wrapper {
+         min-width: 0;
+      width: 100%;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+}
 #sidebarMenu{
     background: #016b97;
     min-height: 100vh;
