@@ -1,3 +1,6 @@
+<?php
+    require 'function/F_barang_masuk.php';
+?>
 <html>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -8,6 +11,13 @@
 <body>
     <div class="d-flex" id="wrapper">
         <?php include 'sidebar.php'; ?>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0">Menu</h2>
+                </div>
+            </nav>
             <div class="container-fluid px-4">
                 <div class="row px-3">
                     <div class="py-2 border-bottom">
