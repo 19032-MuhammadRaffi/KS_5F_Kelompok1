@@ -1,3 +1,6 @@
+<?php
+    require 'function/F_rekap_transaksi.php';
+?>
 <html>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -8,16 +11,23 @@
 <body>
     <div class="d-flex" id="wrapper">
         <?php include 'sidebar.php'; ?>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0">Menu</h2>
+                </div>
+            </nav>
             <div class="container-fluid px-4">                        
 <!-- Tabel Data -->
                 <div class="row py-2 mx-1">
                     <h3 class="h3 mb-3 text-center pt-3">History Data Transaksi</h3>
-                    <form class="form-group d-flex justify-content-end mb-3">
-                        <input class="form-control btn-light border-bottom rounded-0 shadow-none w-25" type="text" placeholder="Search" style="background: transparent; border: none; outline: hidden;">
-                        <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
+                    <form method="POST" class="form-group d-flex justify-content-end mb-3">
+                        <input name="pencarian" class="form-control btn-light border-bottom rounded-0 shadow-none w-25" type="text" placeholder="Search" style="background: transparent; border: none; outline: hidden;">
+                        <button name="searchData" type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
                     </form>
-                        <div class="table-responsive" style="max-height: 250px;">
-                            <table class="table table-bordered border-dark align-middle text-center mx-auto">		              	
+                        <div class="table-responsive" style="max-height: 700px;">
+                            <table class="table table-bordered border-dark align-middle text-center mx-auto" style="min-width: 900px;">		              	
                                 <thead class="bg-4 warna-2">
                                     <tr>
                                         <th>No</th>
@@ -30,15 +40,21 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>No</td>
-                                        <td>Tanggal Transaksi</td>
-                                        <td>Keterangan</td>
-                                        <td>Nama Laptop</td>
-                                        <td>Nama User</td>
-                                        <td>Series</td>
-                                        <td>Jumlah</td>          
-                                    </tr>                                   
+                                <?php
+                                    $no = 1;
+                                    while ($row = mysqli_fetch_array($queryRead)){
+                                        echo '
+                                        <tr>
+                                            <td>'.$no++.'</td>
+                                            <td>'.$row['tgl_transaksi'].'</td>
+                                            <td>'.$row['keterangan'].'</td>
+                                            <td>'.$row['nama_user'].'</td>
+                                            <td>'.$row['nama_laptop'].'</td>
+                                            <td>'.$row['series'].'</td>
+                                            <td>'.$row['jumlah'].'</td>
+                                        </tr>';
+                                    }
+                                ?>                                   
                                 </tbody>
                             </table>
                         </div>
