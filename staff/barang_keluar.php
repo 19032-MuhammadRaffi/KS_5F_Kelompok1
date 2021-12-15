@@ -64,59 +64,46 @@
                                         </table>
                                     </div>                                         
                                 </div>
-<!-- Form Transaksi Masuk -->                                
+<!-- Form Transaksi Keluar -->                                
                                 <div class="col-lg-3">
                                     <h3 class="h4 mb-3 text-center">Form Barang Keluar</h3>
-                                    <form class="form-group">
-                                        <label class="form-label mt-2">ID Laptop</label>
-                                        <select class="form-select">
-                                            <option></option>
-                                            <option></option>
-                                            <option></option>
-                                            <option></option>
-                                        </select> 
+                                    <form method="POST" class="form-group">
+                                        <label class="form-label mt-2">ID Laptop</label> 
+                                        <div class="d-flex justify-content">
+                                            <select class="form-select" name="id_laptop">
+                                                <?php
+                                                    while ($row = mysqli_fetch_array($queryID)){
+                                                        echo '<option value='.$row['id_laptop'].'>'.$row['id_laptop'].'</option>';
+                                                    }
+                                                ?>
+                                            </select>
+                                            <button type="submit" name="pilihID" class="btn btn-primary ms-2">Pilih</button>
+                                        </div>
                                         <label class="form-label mt-2">Nama Laptop</label>
-                                        <input type="text" name="" class="form-control" readonly>
+                                        <input type="text" class="form-control" value="<?php echo $getRow['nama_laptop'] ?>" readonly>
                                         <label class="form-label mt-2">Series</label>
-                                        <input type="text" name="" class="form-control" readonly>
+                                        <input type="text" class="form-control" value="<?php echo $getRow['series'] ?>" readonly>
                                         <label class="form-label mt-2">Jumlah</label>
-                                        <input type="number" name="" class="form-control">
+                                        <input type="number" name="jumlah" class="form-control">
                                         <div class="d-flex justify-content-end mt-3" id="block">
-                                        <button class="w-10 btn btn-primary btn-md" data-bs-toggle="modal" data-bs-target="#alertModal" onclick="action()"><label>Simpan</label></button> 
-                                        </div>                                        
+                                            <button class="w-10 btn btn-primary btn-md" data-bs-toggle="modal" data-bs-target="#alertModal" onclick="action()"><label>Simpan</label></button> 
+                                        </div>
+                                        <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="alertModalLabel">PEMBERITAHUAN !</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">Proses Transaksi Barang ?</div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                                        <button name="prosesKeluar" type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertModal1">Proses</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
                                     </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-sm modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="alertModalLabel">PEMBERITAHUAN !</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                            Simpan Perubahan?
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertModal1">Simpan data</button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="alertModal1" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-sm modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                <div class="text-center">
-                                    <i class="bi bi-check-circle" style="font-size: 2.5em; color: #15b8fc"></i><br>
-                                    Data berhasil disimpan.
-                                </div>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
                                 </div>
                             </div>
                         </div>
