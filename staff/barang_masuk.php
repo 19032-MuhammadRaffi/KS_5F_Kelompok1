@@ -27,10 +27,11 @@
                         <div class="col-lg-12">
                             <div class="row g-5">
 <!-- Tabel Data -->                            
-                                <div class="col-lg-9">        
-                                    <form class="form-group d-flex justify-content-end mb-3">
-                                        <input class="form-control btn-light border-bottom rounded-0 shadow-none w-25" type="text" placeholder="Search" aria-label="Search" style="background: transparent; border: none; outline: hidden;">
-                                        <button type="submit" class="btn shadow-none border-bottom rounded-0 btn-md"><i class="bi bi-search"></i></button>
+                                <div class="col-lg-9">  
+                                    <h4 class="text-center">Data Laptop</h4>      
+                                    <form method="POST" class="form-group d-flex justify-content-end mb-3">
+                                        <input name="pencarian" class="form-control btn-light border-bottom rounded-0 shadow-none w-25" type="text" placeholder="Search" aria-label="Search" style="background: transparent; border: none; outline: hidden;">
+                                        <button name="searchData" type="submit" class="btn shadow-none border-bottom rounded-0 btn-md"><i class="bi bi-search"></i></button>
                                     </form>
                                     <div class="table-responsive" style="max-height: 500px;">              
                                         <table class="table table-bordered border-dark align-middle text-center mx-auto" style="min-width: 800px;">                                    
@@ -43,154 +44,22 @@
                                                     <th style="width: 10%;">Jumlah</th>
                                                 </tr>
                                             </thead>
-                                            <tbody class="bg-light border-dark">
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>                               
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
-                                                <tr>
-                                                    <td>No</td>
-                                                    <td>ID Laptop</td>
-                                                    <td>Nama Laptop</td>
-                                                    <td>Series</td>
-                                                    <td>Jumlah</td>                    
-                                                </tr>  
+                                            <tbody class="bg-light border-dark text-center">
+                                            <?php
+                                                $no = 1;
+                                                while ($row = mysqli_fetch_array($queryRead)){
+                                                    echo '
+                                                    <form>
+                                                        <tr>
+                                                            <td>'.$no++.'</td>
+                                                            <td>'.$row['id_laptop'].'</td>
+                                                            <td>'.$row['nama_laptop'].'</td>
+                                                            <td>'.$row['series'].'</td>
+                                                            <td>'.$row['stok'].'</td>
+                                                        </tr>
+                                                    </form>';
+                                                }
+                                            ?>  
                                             </tbody>
                                         </table>
                                     </div>                                         
