@@ -1,3 +1,6 @@
+<?php
+    require 'function/F_data_laptop.php';
+?>
 <html>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -8,319 +11,236 @@
 <body>
     <div class="d-flex" id="wrapper">
         <?php include 'sidebar.php'; ?>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0">Menu</h2>
+                </div>
+            </nav>
             <div class="container-fluid px-4">
-                <div class="row px-3">
-<!-- Form Input Data -->
-                    <div class="col-md-12">
-                        <form class="form-group mx-2">
-                        <h3 class="h3 mb-4 text-center">Form Input Data Laptop</h3>
-                        <div class="row d-flex flex-sm-wrap">
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="series" class="form-label">Series</label>
-                                <input type="text" name="" class="form-control" maxlength="30">
-                            </div>
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="type_storage" class="form-label">Type Storage</label>
-                                <select class="form-select">
-                                    <option>SSD</option>
-                                    <option>HDD</option>
-                                </select>
-                            </div>
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="firstName" class="form-label">Kamera</label>
-                                <select class="form-select">
-                                <option>Yes</option>
-                                <option>No</option>
-                                </select>
-                            </div>   
-                        </div>
-                        <div class="row d-flex flex-sm-wrap">                      
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="firstName" class="form-label">Nama Laptop</label>
-                                <input type="text" name="" class="form-control" maxlength="50">
-                            </div>
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="firstName" class="form-label">Size Storage</label>
-                                <input type="text" name="" class="form-control" maxlength="4">
-                            </div>  
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="firstName" class="form-label">DVD</label>
-                                <select class="form-select">
-                                <option>Yes</option>
-                                <option>No</option>
-                                </select>
-                            </div>  
-                        </div>
-                        <div class="row d-flex flex-sm-wrap">                      
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="firstName" class="form-label">Merk</label>
-                                <input type="text" name="" class="form-control" maxlength="30">
-                            </div>
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="firstName" class="form-label">RAM</label>
-                                <input type="number" name="" class="form-control" maxlength="2">
-                            </div>
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="firstName" class="form-label">Harga</label>
-                                <input type="number" name="" class="form-control" maxlength="11">
-                            </div>
-                        </div>
-                        <div class="row d-flex flex-sm-wrap">                         
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="firstName" class="form-label">Processor</label>
-                                <input type="text" name="" class="form-control" maxlength="30">
-                            </div>
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="firstName" class="form-label">VGA Discrete</label>
-                                <input type="text" name="" class="form-control" maxlength="30">
-                            </div>
-                            <div class="col px-auto mx-2 my-1">
-                                <label for="firstName" class="form-label">Stok</label>
-                                <input type="number" name="" class="form-control" maxlength="11">
-                            </div> 
-                        <div class="row mt-3">  
-                            <div class="col-md-12 mx-2 d-flex justify-content-center">
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertModal" style="width: 200px;"><label>Simpan</label></button>
-                            </div>                                     
-                        </div>                                              
-                    </form>
-                    </div>
-                    <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="alertModalLabel">PEMBERITAHUAN !</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Simpan Perubahan?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
-                                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertModal1">Simpan data</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                <div class="modal fade" id="alertModal1" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm modal-dialog-centered">
+<!-- Tabel Data -->
+            <div class="row py-2 mx-1">
+                <h3 class="h3 mb-3 text-center pt-3">Tabel Data Laptop</h3>
+                <form method="POST" class="form-group d-flex justify-content-end mb-3">
+                    <input name="pencarian" class="form-control btn-light border-bottom rounded-0 shadow-none w-25" type="text" placeholder="Search" style="background: transparent; border: none; outline: hidden;">
+                    <button name="searchData" type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
+                </form>
+                <div class="table-responsive" style="max-height: 65vh;">
+                    <table class="table table-bordered border-dark align-middle mx-auto" style="min-width: 2000px;">		              	
+                        <thead class="bg-4 warna-2 text-center">
+                            <tr>
+                                <th>No</th>
+                                <th>ID Laptop</th>
+                                <th>Nama Laptop</th>
+                                <th>Merk</th>
+                                <th>Series</th>
+                                <th>Processor</th>                    
+                                <th>VGA Ciscrete</th>
+                                <th>RAM</th>
+                                <td>Type Storage</td>
+                                <td>Size Storage</td>
+                                <td>Kamera</td>
+                                <td>DVD</td>
+                                <td>Gambar Laptop</td>
+                                <td>Harga</td>
+                                <td>Stok</td>
+                                <th style="width: 50px;">Aksi</th>                    
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                            $no = 1;
+                            while ($row = mysqli_fetch_array($queryRead)){
+                                $gambar = $row['gambar_laptop'];
+                                echo '
+                                <form method="post">
+                                <tr>
+                                    <td>'.$no++.'</td>
+                                    <td>'.$row['id_laptop'].'</td>
+                                    <td>'.$row['nama_laptop'].'</td>
+                                    <td>'.$row['merk'].'</td>
+                                    <td>'.$row['series'].'</td>
+                                    <td>'.$row['processor'].'</td>
+                                    <td>'.$row['vga_discrete'].'</td>
+                                    <td class="text-center">'.$row['ram'].'GB</td>
+                                    <td class="text-center">'.$row['type_storage'].'</td>
+                                    <td class="text-center">'.$row['size_storage'].'GB</td>
+                                    <td class="text-center">'.$row['camera'].'</td>
+                                    <td class="text-center">'.$row['dvd'].'</td>
+                                    <td class="text-center">'.'';
+                                        if ($gambar=="") {
+                                            echo '';
+                                        } else {
+                                            echo '<img src="../gambarLaptop/'.$gambar.'" style="height: 150px;">';
+                                        }
+                                        echo '
+                                    </td>
+                                    <td>Rp. '.number_format($row['harga'], 0, ',', '.').'</td>
+                                    <td class="text-center">'.$row['stok'].'</td>
+                                    <td>'?>
+                                        <button class="btn btn-warning my-1" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pencil-square warna-2"></i></button>
+                                        <button class="btn btn-danger my-1" data-bs-toggle="modal" data-bs-target="#hapusModal"><i class="bi bi-trash warna-2"></i></button>
+                                    </td>                  
+                                </tr><?php echo'
+                                </form>';
+                            }
+                        ?>                                   
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">PEMBERITAHUAN !</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="modal-body">
-                                <div class="text-center">
-                                    <i class="bi bi-check-circle" style="font-size: 2.5em; color: #15b8fc"></i><br>
-                                    Data berhasil disimpan.
-                                </div>
+                                Edit data?
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                                <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
                             </div>
                         </div>
                     </div>
-                </div>  
-<!-- Tabel Data -->
-                <div class="row py-2 mx-1">
-                    <h3 class="h3 mb-3 text-center pt-3">Tabel Data Laptop</h3>
-                    <form class="form-group d-flex justify-content-end mb-3">
-                        <input class="form-control btn-light border-bottom rounded-0 shadow-none w-25" type="text" placeholder="Search" style="background: transparent; border: none; outline: hidden;">
-                        <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
-                    </form>
-                        <div class="table-responsive" style="max-height: 250px;">
-                            <table class="table table-bordered border-dark align-middle text-center mx-auto">		              	
-                                <thead class="bg-4 warna-2">
-                                    <tr>
-                                        <th>No</th>
-                                        <th>ID Laptop</th>
-                                        <th>Nama Laptop</th>
-                                        <th>Merk</th>
-                                        <th>Series</th>
-                                        <th>Processor</th>                    
-                                        <th>VGA Ciscrete</th>
-                                        <th>RAM</th>
-                                        <td>Type Storage</td>
-                                        <td>Size Storage</td>
-                                        <td>Kamera</td>
-                                        <td>DVD</td>
-                                        <td>Harga</td>
-                                        <td>Stok</td>
-                                        <th class="text-center">Aksi</th>                    
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>No</td>
-                                        <td>ID Laptop</td>
-                                        <td>Nama Laptop</td>
-                                        <td>Merk</td>
-                                        <td>Series</td>
-                                        <td>Processor</td>
-                                        <td>VGA Ciscrete</td>
-                                        <td>RAM</td>
-                                        <td>Type Storage</td>
-                                        <td>Size Storage</td>
-                                        <td>Kamera</td>
-                                        <td>DVD</td>
-                                        <td>Harga</td>
-                                        <td>Stok</td>
-                                        <td class="text-center text-nowrap">
-                                            <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pencil-square warna-2"></i></a>
-                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-trash warna-2"></i></button>
-                                        </td>                  
-                                    </tr>                                   
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">PEMBERITAHUAN !</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Edit data?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
-                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
-                        </div>
-                        </div>
-                    </div>
-                    </div>    
-                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                </div>    
+                <div class="modal fade" id="hapusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-sm modal-dialog-centered">
                         <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">PEMBERITAHUAN !</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Hapus data?<br>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
-                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Hapus</button>
-                        </div>
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">PEMBERITAHUAN !</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Hapus data?<br>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                                <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Hapus</button>
+                            </div>
                         </div>
                     </div>
-                    </div>   
-                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                </div>   
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-body">
-                        <div class="text-center">
-                            <i class="bi bi-check-circle" style="font-size: 2.5em; color: #15b8fc"></i><br>
-                            Data berhasil dihapus
-                        </div>
+                            <div class="text-center">
+                                <i class="bi bi-check-circle" style="font-size: 2.5em; color: #15b8fc"></i><br>
+                                Data berhasil dihapus
+                            </div>
                         </div>
                         <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
                         </div>
                     </div>
-                    </div>
-                </div> 
-                    <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+                </div>
+            </div> 
+                <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="alertModalLabel">PEMBERITAHUAN !</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Simpan Perubahan?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
-                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Simpan data</button>
-                        </div>
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="alertModalLabel">PEMBERITAHUAN !</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Simpan Perubahan?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Simpan data</button>
+                            </div>
                         </div>
                     </div>
-                    </div> 		
+                </div> 		
 <!-- Edit Modal -->       
                 <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="editModalLabel">Edit Data Laptop</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form class="form-group">
-                                <div class="row">                 
-                                    <div class="col px-auto mx-2">
-                                        <label for="firstName" class="form-label">Series</label>
-                                        <input type="text" name="" class="form-control" maxlength="30">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editModalLabel">Edit Data Laptop</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-group">
+                                    <div class="row">                 
+                                        <div class="col px-auto mx-2">
+                                            <label for="firstName" class="form-label">Series</label>
+                                            <input type="text" name="" class="form-control" maxlength="30">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row my-2">
-                                    <div class="col px-auto mx-2">
-                                        <label for="firstName" class="form-label">Nama Laptop</label>
-                                        <input type="text" name="" class="form-control" maxlength="50">
+                                    <div class="row my-2">
+                                        <div class="col px-auto mx-2">
+                                            <label for="firstName" class="form-label">Nama Laptop</label>
+                                            <input type="text" name="" class="form-control" maxlength="50">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row my-2">
-                                    <div class="col px-auto mx-2">
-                                        <label for="firstName" class="form-label">Merk</label>
-                                        <input type="text" name="" class="form-control" maxlength="30">
-                                    </div>
-                                    <div class="col px-auto mx-2">
-                                        <label for="firstName" class="form-label">Processor</label>
-                                        <input type="text" name="" class="form-control" maxlength="30">
-                                    </div>
-                                </div> 
-                                <div class="row my-2">
-                                    <div class="col px-auto mx-2">
-                                        <label for="firstName" class="form-label">Type Storage</label>
-                                        <select class="form-select">
-                                            <option>SSD</option>
-                                            <option>HDD</option>
-                                        </select>
-                                    </div>   
-                                    <div class="col px-auto mx-2">
-                                        <label for="firstName" class="form-label">Size Storage</label>
-                                        <input type="text" name="" class="form-control" maxlength="4">
-                                    </div>
-                                </div>  
-                                <div class="row my-2"> 
-                                    <div class="col px-auto mx-2">
-                                        <label for="firstName" class="form-label">Kamera</label>
-                                        <select class="form-select">
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                        </select>
-                                    </div>    
-                                    <div class="col px-auto mx-2">
-                                        <label for="firstName" class="form-label">DVD</label>
-                                        <select class="form-select">
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                        </select>
-                                    </div>   
-                                    <div class="col px-auto mx-2">
-                                        <label for="firstName" class="form-label">RAM</label>
-                                        <input type="number" name="" class="form-control" maxlength="2">
-                                    </div>
-                                </div>
-                                <div class="row my-2">  
-                                    <div class="col px-auto mx-2">
-                                        <label for="firstName" class="form-label">VGA Discrete</label>
-                                        <input type="text" name="" class="form-control" maxlength="30">
-                                    </div>
-                                    <div class="col px-auto mx-2">
-                                        <label for="firstName" class="form-label">Harga</label>
-                                        <input type="number" name="" class="form-control" maxlength="11">
+                                    <div class="row my-2">
+                                        <div class="col px-auto mx-2">
+                                            <label for="firstName" class="form-label">Merk</label>
+                                            <input type="text" name="" class="form-control" maxlength="30">
+                                        </div>
+                                        <div class="col px-auto mx-2">
+                                            <label for="firstName" class="form-label">Processor</label>
+                                            <input type="text" name="" class="form-control" maxlength="30">
+                                        </div>
+                                    </div> 
+                                    <div class="row my-2">
+                                        <div class="col px-auto mx-2">
+                                            <label for="firstName" class="form-label">Type Storage</label>
+                                            <select class="form-select">
+                                                <option value="SSD">SSD</option>
+                                                <option value="HDD">HDD</option>
+                                            </select>
+                                        </div>   
+                                        <div class="col px-auto mx-2">
+                                            <label for="firstName" class="form-label">Size Storage</label>
+                                            <input type="text" name="" class="form-control" maxlength="4">
+                                        </div>
                                     </div>  
-                                </div> 
-                                <div class="row mt-3">  
-                                <div class="col-md-12 d-flex justify-content-end">
-                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertModal">Simpan</button>
-                                </div>                                     
-                                </div>                                              
-                            </form>
-                        </div>
+                                    <div class="row my-2"> 
+                                        <div class="col px-auto mx-2">
+                                            <label for="firstName" class="form-label">Kamera</label>
+                                            <select class="form-select">
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>    
+                                        <div class="col px-auto mx-2">
+                                            <label for="firstName" class="form-label">DVD</label>
+                                            <select class="form-select">
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>   
+                                        <div class="col px-auto mx-2">
+                                            <label for="firstName" class="form-label">RAM</label>
+                                            <input type="number" name="" class="form-control" maxlength="2">
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">  
+                                        <div class="col px-auto mx-2">
+                                            <label for="firstName" class="form-label">VGA Discrete</label>
+                                            <input type="text" name="" class="form-control" maxlength="30">
+                                        </div>
+                                        <div class="col px-auto mx-2">
+                                            <label for="firstName" class="form-label">Harga</label>
+                                            <input type="number" name="" class="form-control" maxlength="11">
+                                        </div>  
+                                    </div> 
+                                    <div class="row mt-3">  
+                                        <div class="col-md-12 d-flex justify-content-end">
+                                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertModal">Simpan</button>
+                                        </div>                                     
+                                    </div>                                              
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    </div>	
+                </div>	
             </div>  
         </div>
     </div>
@@ -335,5 +255,6 @@
             el.classList.toggle("toggled");
         };
     </script>
+    
 </body>
 </html>
