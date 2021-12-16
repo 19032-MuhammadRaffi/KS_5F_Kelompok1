@@ -1,12 +1,12 @@
 <?php
-    require 'function/F_rekap_transaksi.php';
+    require 'function/F_index.php';
 ?>
 <html>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/styles.css" />
-    <title>Data Transaksi</title>
+    <title>Dashboard</title>
 </head>
 <body>
     <div class="d-flex" id="wrapper">
@@ -18,48 +18,41 @@
                     <h2 class="fs-2 m-0">Menu</h2>
                 </div>
             </nav>
-            <div class="container-fluid px-4">                        
-<!-- Tabel Data -->
-                <div class="row py-2 mx-1">
-                    <h3 class="h3 mb-3 text-center pt-3">History Data Transaksi</h3>
-                    <form method="POST" class="form-group d-flex justify-content-end mb-3">
-                        <input name="pencarian" class="form-control btn-light border-bottom rounded-0 shadow-none w-25" type="text" placeholder="Search" style="background: transparent; border: none; outline: hidden;">
-                        <button name="searchData" type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
-                    </form>
-                        <div class="table-responsive" style="max-height: 700px;">
-                            <table class="table table-bordered border-dark align-middle text-center mx-auto" style="min-width: 900px;">		              	
-                                <thead class="bg-4 warna-2">
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Tanggal Transaksi</th>
-                                        <th>Keterangan</th>
-                                        <th>Nama User</th>
-                                        <th>Nama Laptop</th>
-                                        <th>Series</th> 
-                                        <th>Jumlah</th>                   
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                    $no = 1;
-                                    while ($row = mysqli_fetch_array($queryRead)){
-                                        echo '
-                                        <tr>
-                                            <td>'.$no++.'</td>
-                                            <td>'.$row['tgl_transaksi'].'</td>
-                                            <td>'.$row['keterangan'].'</td>
-                                            <td>'.$row['nama_user'].'</td>
-                                            <td>'.$row['nama_laptop'].'</td>
-                                            <td>'.$row['series'].'</td>
-                                            <td>'.$row['jumlah'].'</td>
-                                        </tr>';
-                                    }
-                                ?>                                   
-                                </tbody>
-                            </table>
+            <div class="container-fluid px-4">
+<!-- Status Box -->
+                <div class="row g-3 my-2">
+                    <div class="col-md-4">
+                        <div class="p-3 bg-4 shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2 warna-2 pt-2"><?php echo $rowData ?></h3>
+                                <p class="fs-5 fw-bold warna-2" name>Data Laptop</p>
+                            </div>
+                            <i class="fas fa-book-reader fs-1 warna-3 rounded-full bg-light p-3"></i>
                         </div>
                     </div>
-                </div>	
+                    <div class="col-md-4">
+                        <div class="p-3 bg-4 shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2 warna-2 pt-2"><?php echo $rowSeries ?></h3>
+                                <p class="fs-5 fw-bold warna-2">Series Laptop</p>
+                            </div>
+                            <i class="fas fa-tasks fs-1 warna-3 rounded-full bg-light p-3"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 bg-4 shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2 warna-2 pt-2"><?php echo $rowStok[0] ?></h3>
+                                <p class="fs-5 fw-bold warna-2">Jumlah Stok</p>
+                            </div>
+                            <i class="fas fa-users fs-1 warna-3 rounded-full bg-light p-3"></i>
+                        </div>
+                    </div>
+                </div>
+<!-- Page Content -->
+                <div class="row my-5">
+                    <h3 class="fs-4 mb-3">Selamat Datang <?php echo $rowSession['nama'] ?></h3>
+                </div>
             </div>  
         </div>
     </div>
