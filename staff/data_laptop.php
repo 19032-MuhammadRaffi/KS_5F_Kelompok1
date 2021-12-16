@@ -94,36 +94,36 @@
                                             echo '
                                         </td>
                                         <td>Rp. '.number_format($harga[$i], 0, ',', '.').'</td>
-                                            <td class="text-center">'.$stok[$i].'</td>
-                                            <td>'?>
-                                                <button type="button" class="btn btn-warning my-1" data-bs-toggle="modal" data-bs-target="#edit<?php echo $id_laptop[$i] ?>"><i class="bi bi-pencil-square warna-2"></i></button>
-                                                <button type="button" class="btn btn-danger my-1" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $id_laptop[$i] ?>"><i class="bi bi-trash warna-2"></i></button>
-                                                <?php echo'
-                                                <!-- Edit Modal -->     
-                                                <div class="modal fade" id="edit'.$id_laptop[$i].'" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h5 class="modal-title" id="editModalLabel">Edit Data Laptop</h5>
-                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <td class="text-center">'.$stok[$i].'</td>
+                                        <td>'?>
+                                            <button type="button" class="btn btn-warning my-1" data-bs-toggle="modal" data-bs-target="#edit<?php echo $id_laptop[$i] ?>"><i class="bi bi-pencil-square warna-2"></i></button>
+                                            <button type="button" class="btn btn-danger my-1" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $id_laptop[$i] ?>"><i class="bi bi-trash warna-2"></i></button>
+                                            <?php echo'
+                                            <!-- Edit Modal -->     
+                                            <div class="modal fade" id="edit'.$id_laptop[$i].'" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="editModalLabel">Edit Data Laptop</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="invisible position-absolute">
+                                                                <input type="text" class="form-control" name="id_laptop" value="'.$id_laptop[$i].'">
                                                             </div>
-                                                            <div class="modal-body">
-                                                                <div class="invisible position-absolute">
-                                                                    <input type="text" class="form-control" name="id_laptop" value="'.$id_laptop[$i].'">
+                                                            <div class="row">                 
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="firstName" class="form-label">Series</label>
+                                                                    <input type="text" name="series" class="form-control"  value="'.$series[$i].'">
                                                                 </div>
-                                                                <div class="row">                 
-                                                                    <div class="col px-auto mx-2">
-                                                                        <label for="firstName" class="form-label">Series</label>
-                                                                        <input type="text" name="series" class="form-control"  value="'.$series[$i].'">
-                                                                    </div>
+                                                            </div>
+                                                            <div class="row my-2">
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="firstName" class="form-label">Nama Laptop</label>
+                                                                    <input type="text" name="nama_laptop" class="form-control" value="'.$nama_laptop[$i].'">
                                                                 </div>
-                                                                <div class="row my-2">
-                                                                    <div class="col px-auto mx-2">
-                                                                        <label for="firstName" class="form-label">Nama Laptop</label>
-                                                                        <input type="text" name="nama_laptop" class="form-control" value="'.$nama_laptop[$i].'">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row my-2">
+                                                            </div>
+                                                            <div class="row my-2">
                                                                 <div class="col px-auto mx-2">
                                                                     <label for="firstName" class="form-label">Merk</label>
                                                                     <input type="text" name="merk" class="form-control" value="'.$merk[$i].'">
@@ -208,7 +208,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>    
                                             <!-- Tombol Konfirmasi Hapus -->
                                             <div class="modal fade" id="hapus'.$id_laptop[$i].'" tabindex="-1" aria-labelledby="alertHapusModal" aria-hidden="true">
                                                 <div class="modal-dialog modal-sm modal-dialog-centered">
