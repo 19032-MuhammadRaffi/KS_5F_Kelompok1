@@ -23,20 +23,20 @@
     color: white;
 }
 .warna-3{
-  color: #016b97;
+    color: #016b97;
 }
 .active-bar {
-  color: black;
-  background-color: white;
+    color: black;
+    background-color: white;
 }
 .rounded-full {
-    border-radius: 100%;
+      border-radius: 100%;
 }
 .btnInput{
-  width: 170px;
+    width: 170px;
 }
 #wrapper {
-    overflow-x: hidden;
+      overflow-x: hidden;
 }
 #sidebar-wrapper {
     min-height: 100vh;
