@@ -209,75 +209,32 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                    <div class="row my-2">
-                                        <div class="col px-auto mx-2">
-                                            <label for="firstName" class="form-label">Nama Laptop</label>
-                                            <input type="text" name="" class="form-control" maxlength="50">
-                                        </div>
-                                    </div>
-                                    <div class="row my-2">
-                                        <div class="col px-auto mx-2">
-                                            <label for="firstName" class="form-label">Merk</label>
-                                            <input type="text" name="" class="form-control" maxlength="30">
-                                        </div>
-                                        <div class="col px-auto mx-2">
-                                            <label for="firstName" class="form-label">Processor</label>
-                                            <input type="text" name="" class="form-control" maxlength="30">
-                                        </div>
-                                    </div> 
-                                    <div class="row my-2">
-                                        <div class="col px-auto mx-2">
-                                            <label for="firstName" class="form-label">Type Storage</label>
-                                            <select class="form-select">
-                                                <option value="SSD">SSD</option>
-                                                <option value="HDD">HDD</option>
-                                            </select>
-                                        </div>   
-                                        <div class="col px-auto mx-2">
-                                            <label for="firstName" class="form-label">Size Storage</label>
-                                            <input type="text" name="" class="form-control" maxlength="4">
-                                        </div>
-                                    </div>  
-                                    <div class="row my-2"> 
-                                        <div class="col px-auto mx-2">
-                                            <label for="firstName" class="form-label">Kamera</label>
-                                            <select class="form-select">
-                                                <option value="Yes">Yes</option>
-                                                <option value="No">No</option>
-                                            </select>
-                                        </div>    
-                                        <div class="col px-auto mx-2">
-                                            <label for="firstName" class="form-label">DVD</label>
-                                            <select class="form-select">
-                                                <option value="Yes">Yes</option>
-                                                <option value="No">No</option>
-                                            </select>
-                                        </div>   
-                                        <div class="col px-auto mx-2">
-                                            <label for="firstName" class="form-label">RAM</label>
-                                            <input type="number" name="" class="form-control" maxlength="2">
-                                        </div>
-                                    </div>
-                                    <div class="row my-2">  
-                                        <div class="col px-auto mx-2">
-                                            <label for="firstName" class="form-label">VGA Discrete</label>
-                                            <input type="text" name="" class="form-control" maxlength="30">
-                                        </div>
-                                        <div class="col px-auto mx-2">
-                                            <label for="firstName" class="form-label">Harga</label>
-                                            <input type="number" name="" class="form-control" maxlength="11">
-                                        </div>  
-                                    </div> 
-                                    <div class="row mt-3">  
-                                        <div class="col-md-12 d-flex justify-content-end">
-                                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertModal">Simpan</button>
-                                        </div>                                     
-                                    </div>                                              
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>	
+                                            <!-- Tombol Konfirmasi Hapus -->
+                                            <div class="modal fade" id="hapus'.$id_laptop[$i].'" tabindex="-1" aria-labelledby="alertHapusModal" aria-hidden="true">
+                                                <div class="modal-dialog modal-sm modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">PEMBERITAHUAN !</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Hapus data '.$id_laptop[$i++].' ?<br>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                                                            <button name="hapusData" type="submit" class="btn btn-primary">Hapus</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>                
+                                    </tr>
+                                </form>';
+                            }
+                        ?>                                   
+                        </tbody>
+                    </table>
+                </div>  	
             </div>  
         </div>
     </div>
