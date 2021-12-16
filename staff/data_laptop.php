@@ -54,29 +54,45 @@
                             $i = 0;
                             while ($row = mysqli_fetch_array($queryRead)){
                                 $gambar = $row['gambar_laptop'];
+                                $id_laptop[$i] = $row['id_laptop'];
+                                $nama_laptop[$i] = $row['nama_laptop'];
+                                $merk[$i] = $row['merk'];
+                                $series[$i] = $row['series'];
+                                $processor[$i] = $row['processor'];
+                                $vga_discrete[$i] = $row['vga_discrete'];
+                                $ram[$i] = $row['ram'];
+                                $type_storage[$i] = $row['type_storage'];
+                                $size_storage[$i] = $row['size_storage'];
+                                $camera[$i] = $row['camera'];
+                                $dvd[$i] = $row['dvd'];
+                                $harga[$i] = $row['harga'];
+                                $stok[$i] = $row['stok'];
                                 echo '
-                                <form method="post">
-                                <tr>
-                                    <td>'.$no++.'</td>
-                                    <td>'.$row['id_laptop'].'</td>
-                                    <td>'.$row['nama_laptop'].'</td>
-                                    <td>'.$row['merk'].'</td>
-                                    <td>'.$row['series'].'</td>
-                                    <td>'.$row['processor'].'</td>
-                                    <td>'.$row['vga_discrete'].'</td>
-                                    <td class="text-center">'.$row['ram'].'GB</td>
-                                    <td class="text-center">'.$row['type_storage'].'</td>
-                                    <td class="text-center">'.$row['size_storage'].'GB</td>
-                                    <td class="text-center">'.$row['camera'].'</td>
-                                    <td class="text-center">'.$row['dvd'].'</td>
-                                    <td class="text-center">'.'';
-                                        if ($gambar=="") {
-                                            echo '';
-                                        } else {
-                                            echo '<img src="../gambarLaptop/'.$gambar.'" style="height: 150px;">';
-                                        }
-                                        echo '
-                                    </td>
+                                <form method="POST" class="form-group" enctype="multipart/form-data">
+                                    <div class="invisible position-absolute">
+                                        <input type="text" class="form-control" name="getID" value="'.$id_laptop[$i].'">
+                                    </div>
+                                    <tr>
+                                        <td class="text-center">'.$no++.'</td>
+                                        <td class="text-center">'.$id_laptop[$i].'</td>
+                                        <td class="text-center">'.$nama_laptop[$i].'</td>
+                                        <td class="text-center">'.$merk[$i].'</td>
+                                        <td class="text-center">'.$series[$i].'</td>
+                                        <td class="text-center">'.$processor[$i].'</td>
+                                        <td class="text-center">'.$vga_discrete[$i].'</td>
+                                        <td class="text-center">'.$ram[$i].'GB</td>
+                                        <td class="text-center">'.$type_storage[$i].'</td>
+                                        <td class="text-center">'.$size_storage[$i].'GB</td>
+                                        <td class="text-center">'.$camera[$i].'</td>
+                                        <td class="text-center">'.$dvd[$i].'</td>
+                                        <td class="text-center">'.'';
+                                            if ($gambar=="") {
+                                                echo '';
+                                            } else {
+                                                echo '<img src="../gambarLaptop/'.$gambar.'" style="height: 150px;">';
+                                            }
+                                            echo '
+                                        </td>
                                     <td>Rp. '.number_format($row['harga'], 0, ',', '.').'</td>
                                     <td class="text-center">'.$row['stok'].'</td>
                                     <td>'?>
