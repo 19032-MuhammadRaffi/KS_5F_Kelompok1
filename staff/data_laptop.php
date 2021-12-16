@@ -51,6 +51,7 @@
                         <tbody>
                         <?php
                             $no = 1;
+                            $i = 0;
                             while ($row = mysqli_fetch_array($queryRead)){
                                 $gambar = $row['gambar_laptop'];
                                 echo '
