@@ -73,7 +73,7 @@
                                             <select class="form-select" name="id_laptop">
                                                 <?php
                                                     while ($row = mysqli_fetch_array($queryID)){
-                                                        echo '<option value='.$row['id_laptop'].'>'.$row['id_laptop'].'</option>';
+                                                        echo '<option' ?> <?php if ($nowID == $row['id_laptop']) { echo 'selected'; }?> <?php echo ' value='.$row['id_laptop'].'>'.$row['id_laptop'].'</option>';
                                                     }
                                                 ?>
                                             </select>
