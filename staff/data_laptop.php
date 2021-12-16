@@ -123,6 +123,39 @@
                                                                         <input type="text" name="nama_laptop" class="form-control" value="'.$nama_laptop[$i].'">
                                                                     </div>
                                                                 </div>
+                                                                <div class="row my-2">
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="firstName" class="form-label">Merk</label>
+                                                                    <input type="text" name="merk" class="form-control" value="'.$merk[$i].'">
+                                                                </div>
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="firstName" class="form-label">Processor</label>
+                                                                    <input type="text" name="processor" class="form-control" value="'.$processor[$i].'">
+                                                                </div>
+                                                            </div> 
+                                                            <div class="row my-2">
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="firstName" class="form-label">Type Storage</label>
+                                                                    <select class="form-select" name="type_storage">
+                                                                        <option '?> <?php if ($type_storage[$i] == "SSD") { echo 'selected'; }?> <?php echo ' value="SSD">SSD</option>
+                                                                        <option '?> <?php if ($type_storage[$i] == "HDD") { echo 'selected'; }?> <?php echo ' value="HDD">HDD</option>
+                                                                    </select>
+                                                                </div>   
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="firstName" class="form-label">Size Storage</label>
+                                                                    <input type="text" name="size_storage" class="form-control" value="'.$size_storage[$i].'">
+                                                                </div>
+                                                            </div>  
+                                                            <div class="row my-2">
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="firstName" class="form-label">VGA Discrete</label>
+                                                                    <input type="text" name="vga_discrete" class="form-control" value="'.$vga_discrete[$i].'">
+                                                                </div>
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="firstName" class="form-label">RAM</label>
+                                                                    <input type="number" name="ram" class="form-control" value="'.$ram[$i].'">
+                                                                </div>
+                                                            </div>
                 <div class="modal fade" id="hapusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-sm modal-dialog-centered">
                         <div class="modal-content">
