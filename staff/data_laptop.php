@@ -191,54 +191,24 @@
                                                     </div>
                                                 </div>
                                             </div>
-            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-sm modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="text-center">
-                                <i class="bi bi-check-circle" style="font-size: 2.5em; color: #15b8fc"></i><br>
-                                Data berhasil dihapus
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-                <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="alertModalLabel">PEMBERITAHUAN !</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Simpan Perubahan?
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
-                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Simpan data</button>
-                            </div>
-                        </div>
-                    </div>
-                </div> 		
-<!-- Edit Modal -->       
-                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="editModalLabel">Edit Data Laptop</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-group">
-                                    <div class="row">                 
-                                        <div class="col px-auto mx-2">
-                                            <label for="firstName" class="form-label">Series</label>
-                                            <input type="text" name="" class="form-control" maxlength="30">
-                                        </div>
-                                    </div>
+                                            <!-- Tombol Konfirmasi Edit-->
+                                            <div class="modal fade" id="alertEditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">PEMBERITAHUAN !</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Edit data?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                                                            <button type="submit" class="btn btn-primary" name="editData">Edit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                     <div class="row my-2">
                                         <div class="col px-auto mx-2">
                                             <label for="firstName" class="form-label">Nama Laptop</label>
