@@ -8,7 +8,18 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <title>Data Laptop</title>
 </head>
-<body
+<body>
+    <div class="d-flex" id="wrapper">
+        <?php include 'sidebar.php'; ?>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0">Menu</h2>
+                </div>
+            </nav>
+            <div class="container-fluid px-4">
+                <div class="row px-3">
 <!-- Form Input Data -->
                     <div class="col-md-12">
                         <form method="POST" class="form-group mx-2 justify-content-center" enctype="multipart/form-data">
@@ -33,7 +44,24 @@
                                     <input type="text" name="processor" class="form-control">
                                 </div>
                             </div>
-
+                            <div class="row justify-content-md-center"> 
+                                <div class="col-lg-4 mx-2 my-1">
+                                    <label for="ram" class="form-label">RAM</label>
+                                    <input type="number" name="ram" class="form-control" placeholder="GB">
+                                </div>
+                                <div class="col-lg-4 mx-2 my-1">
+                                    <label for="vga_discrete" class="form-label">VGA Discrete</label>
+                                    <input type="text" name="vga_discrete" class="form-control">
+                                </div>  
+                            </div>
+                            <div class="row justify-content-md-center">
+                                <div class="col-lg-4 mx-2 my-1">
+                                    <label for="type_storage" class="form-label">Type Storage</label>
+                                    <select class="form-select" name="type_storage">
+                                        <option value="SSD">SSD</option>
+                                        <option value="HDD">HDD</option>
+                                    </select>
+                                </div>
                                 <div class="col-lg-4 mx-2 my-1">
                                     <label for="size_storage" class="form-label">Size Storage</label>
                                     <input type="text" name="size_storage" class="form-control" placeholder="GB">
@@ -92,6 +120,16 @@
             </div>  
         </div>
     </div>
+<!-- Javascript -->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
     </script>
 </body>
 </html>
