@@ -156,23 +156,41 @@
                                                                     <input type="number" name="ram" class="form-control" value="'.$ram[$i].'">
                                                                 </div>
                                                             </div>
-                <div class="modal fade" id="hapusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">PEMBERITAHUAN !</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Hapus data?<br>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
-                                <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Hapus</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>   
+                                                            <div class="row my-2"> 
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="firstName" class="form-label">Kamera</label>
+                                                                    <select class="form-select" name="camera">
+                                                                        <option '?> <?php if ($camera[$i] == "Yes") { echo 'selected'; }?> <?php echo ' value="Yes">Yes</option>
+                                                                        <option '?> <?php if ($camera[$i] == "No") { echo 'selected'; }?> <?php echo ' value="No">No</option>
+                                                                    </select>
+                                                                </div>    
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="firstName" class="form-label">DVD</label>
+                                                                    <select class="form-select" name="dvd">
+                                                                        <option '?> <?php if ($dvd[$i] == "Yes") { echo 'selected'; }?> <?php echo ' value="Yes">Yes</option>
+                                                                        <option '?> <?php if ($dvd[$i] == "No") { echo 'selected'; }?> <?php echo ' value="No">No</option>
+                                                                    </select>
+                                                                </div> 
+                                                            </div>
+                                                            <div class="row my-2">
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="gambar_laptop" class="form-label">Gambar Laptop</label>
+                                                                    <input type="file" name="gambar_laptop" class="form-control">
+                                                                </div>  
+                                                                <div class="col px-auto mx-2">
+                                                                    <label for="firstName" class="form-label">Harga</label>
+                                                                    <input type="number" name="harga" class="form-control" value="'.$harga[$i].'">
+                                                                </div>  
+                                                            </div> 
+                                                            <div class="row mt-3">  
+                                                                <div class="col-md-12 d-flex justify-content-end">
+                                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertEditModal">Simpan</button>
+                                                                </div>                                     
+                                                            </div>   
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
             <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-sm modal-dialog-centered">
                     <div class="modal-content">
