@@ -1,6 +1,6 @@
-<!-- <?php
-        require 'function/F_index.php';
-        ?> -->
+<?php
+require 'function/F_index.php';
+?>
 <html>
 
 <head>
@@ -14,46 +14,50 @@
     <div class="d-flex" id="wrapper">
         <?php include 'sidebar.php'; ?>
         <div id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light py-4 px-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-align-left fs-4 me-3" id="menu-toggle"></i>
-                    <h2 class="fs-2 m-0">Menu</h2>
-                </div>
-            </nav>
             <div class="container-fluid px-4">
                 <!-- Status Box -->
                 <div class="row g-3 my-2">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="p-3 bg-4 shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                                 <h3 class="fs-2 warna-2 pt-2"><?php echo $rowData ?></h3>
                                 <p class="fs-5 fw-bold warna-2" name>Data Laptop</p>
                             </div>
-                            <i class="fas fa-book-reader fs-1 warna-3 rounded-full bg-light p-3"></i>
+                            <i class="fas fa-book-reader fs-1 warna-3 rounded-full bg-light p-2"></i>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="p-3 bg-4 shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                                 <h3 class="fs-2 warna-2 pt-2"><?php echo $rowSeries ?></h3>
                                 <p class="fs-5 fw-bold warna-2">Series Laptop</p>
                             </div>
-                            <i class="fas fa-tasks fs-1 warna-3 rounded-full bg-light p-3"></i>
+                            <i class="fas fa-tasks fs-1 warna-3 rounded-full bg-light p-2"></i>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="p-3 bg-4 shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                                 <h3 class="fs-2 warna-2 pt-2"><?php echo $rowStok[0] ?></h3>
                                 <p class="fs-5 fw-bold warna-2">Jumlah Stok</p>
                             </div>
-                            <i class="fas fa-users fs-1 warna-3 rounded-full bg-light p-3"></i>
+                            <i class="fas fa-users fs-1 warna-3 rounded-full bg-light p-2"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3 bg-4 shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2 warna-2 pt-2"><?php echo $rowPengguna ?></h3>
+                                <p class="fs-5 fw-bold warna-2" name>Data Pengguna</p>
+                            </div>
+                            <i class="fas fa-user fs-1 warna-3 rounded-full bg-light p-2"></i>
                         </div>
                     </div>
                 </div>
                 <!-- Page Content -->
                 <div class="row my-5">
                     <h3 class="fs-4 mb-3">Selamat Datang <?php echo $rowSession['nama'] ?></h3>
+                    <div id="grafik_laptop"></div>
                 </div>
             </div>
         </div>
