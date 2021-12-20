@@ -10,4 +10,7 @@
 // Ambil Jumlah Stok di Gudang
     $queryStok = mysqli_query($koneksi, "SELECT SUM(stok) FROM data_laptop");
     $rowStok = mysqli_fetch_array($queryStok);
+// Ambil Jumlah Data Pengguna
+    $queryPengguna = mysqli_query($koneksi, "SELECT * FROM user");
+    $rowPengguna = mysqli_num_rows($queryPengguna);
 ?>
