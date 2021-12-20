@@ -13,7 +13,11 @@
         $queryGetID = mysqli_query($koneksi, "SELECT nama_laptop, series FROM data_laptop WHERE id_laptop='$id_laptop'");
         $getRow = mysqli_fetch_array($queryGetID);
     }
-if(!isset($_POST["pilihID"])){
+    if(!isset($_POST["pilihID"])){
         $getRow['nama_laptop'] = "";
         $getRow['series'] = "";
     }
+    if(isset($_POST["prosesKeluar"])){
+        $queryID = mysqli_query($koneksi, "SELECT max(id_keluar) as id_terbesar FROM barang_keluar");
+        $data = mysqli_fetch_array($queryID);
+        $id_keluar = $data['id_terbesar'];
