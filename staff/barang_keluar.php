@@ -7,15 +7,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/styles.css" />
     <title>Barang Keluar</title>
-</head>
+    </head>
 <body>
     <div class="d-flex" id="wrapper">
         <?php include 'sidebar.php'; ?>
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light py-4 px-4">
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center me-auto">
                     <i class="fas fa-align-left fs-4 me-3" id="menu-toggle"></i>
                     <h2 class="fs-2 m-0">Menu</h2>
+                </div>
+                <div class="dropdown">
+                    <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw me-3"></i>Pengaturan Akun</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li>
+                            <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit<?php echo $id_user ?>">
+                            <i class="fas fa-cog me-3"></i>Setting</button>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item text-danger" href="../logout.php" name="logout"><i class="fas fa-sign-out-alt me-3"></i>Logout</a></li>
+                    </ul>
                 </div>
             </nav>
             <div class="container-fluid px-4">
