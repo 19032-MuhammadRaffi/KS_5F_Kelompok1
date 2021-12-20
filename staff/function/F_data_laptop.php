@@ -135,15 +135,15 @@
     }
 //Delete Data Laptop
     if(isset($_POST["hapusData"])){
-        $getID = $_POST['getID'];
-        $cariFile = mysqli_query($koneksi, "SELECT * FROM data_laptop WHERE id_laptop = '$getID'") or die(mysqli_error($koneksi));
+        $id_laptop = $_POST['id_laptop'];
+        $cariFile = mysqli_query($koneksi, "SELECT * FROM data_laptop WHERE id_laptop = '$id_laptop'") or die(mysqli_error($koneksi));
         $cariRow = mysqli_fetch_array($cariFile);
         $namaFile = $cariRow['gambar_laptop'];
         $lokasi = "../gambarLaptop/".$namaFile;
         if (file_exists($lokasi)){
             unlink($lokasi);
         }
-        $queryHapus = mysqli_query($koneksi, "DELETE FROM data_laptop WHERE id_laptop = '$getID'") or die($koneksi);
+        $queryHapus = mysqli_query($koneksi, "DELETE FROM data_laptop WHERE id_laptop = '$id_laptop'") or die($koneksi);
         if ($queryHapus){
             echo "
                 <script>
