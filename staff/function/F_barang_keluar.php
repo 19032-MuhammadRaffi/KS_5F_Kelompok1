@@ -27,3 +27,5 @@
         $id_keluar = $huruf . sprintf("%07s", $urutan);
         $id_laptop = $_POST['id_laptop'];
         $id_user = $_SESSION['id_user'];
+        $nama_user = $_SESSION['nama'];
+        $jumlah = $_POST['jumlah'];
