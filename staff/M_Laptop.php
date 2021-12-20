@@ -251,6 +251,64 @@
                                 <input type="number" name="size_storage" class="form-control" value="<?php echo $size_storage[$i] ?>">
                             </div>
                         </div>
+                        <div class="row my-2">
+                            <div class="col px-auto mx-2">
+                                <label for="firstName" class="form-label">VGA Discrete</label>
+                                <input type="text" name="vga_discrete" class="form-control" value="<?php echo $vga_discrete[$i] ?>">
+                            </div>
+                            <div class="col px-auto mx-2">
+                                <label for="firstName" class="form-label">RAM</label>
+                                <input type="number" name="ram" class="form-control" value="<?php echo $ram[$i] ?>">
+                            </div>
+                        </div>
+                        <div class="row my-2"> 
+                            <div class="col px-auto mx-2">
+                                <label for="firstName" class="form-label">Kamera</label>
+                                <select class="form-select" name="camera">
+                                    <option <?php if ($camera[$i] == "Yes") { echo 'selected'; }?> value="Yes">Yes</option>
+                                    <option <?php if ($camera[$i] == "No") { echo 'selected'; }?> value="No">No</option>
+                                </select>
+                            </div>    
+                            <div class="col px-auto mx-2">
+                                <label for="firstName" class="form-label">DVD</label>
+                                <select class="form-select" name="dvd">
+                                    <option <?php if ($dvd[$i] == "Yes") { echo 'selected'; }?> value="Yes">Yes</option>
+                                    <option <?php if ($dvd[$i] == "No") { echo 'selected'; }?> value="No">No</option>
+                                </select>
+                            </div> 
+                        </div>
+                        <div class="row my-2">
+                            <div class="col px-auto mx-2">
+                                <label for="gambar_laptop" class="form-label">Gambar Laptop</label>
+                                <input type="file" name="gambar_laptop" class="form-control">
+                            </div>  
+                            <div class="col px-auto mx-2">
+                                <label for="firstName" class="form-label">Harga</label>
+                                <input type="number" name="harga" class="form-control" value="<?php echo $harga[$i] ?>">
+                            </div>  
+                        </div> 
+                        <div class="row mt-3">  
+                            <div class="col-md-12 d-flex justify-content-end">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertEditModal<?php echo $id_laptop[$i] ?>">Simpan</button>
+                            </div>                                     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade text-start" id="alertEditModal<?php echo $id_laptop[$i] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Pemberitahuan</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Edit data <?php echo $id_laptop[$i] ?> ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <button type="submit" class="btn btn-primary" name="editData">Yes</button>
                     </div>
                 </div>
             </div>
