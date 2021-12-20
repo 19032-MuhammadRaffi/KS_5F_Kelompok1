@@ -13,39 +13,51 @@
         <?php include 'sidebar.php'; ?>
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light py-4 px-4">
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center me-auto">
                     <i class="fas fa-align-left fs-4 me-3" id="menu-toggle"></i>
                     <h2 class="fs-2 m-0">Menu</h2>
                 </div>
+                <div class="dropdown">
+                    <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw me-3"></i>Pengaturan Akun</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li>
+                            <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit<?php echo $id_user ?>">
+                            <i class="fas fa-cog me-3"></i>Setting</button>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item text-danger" href="../logout.php" name="logout"><i class="fas fa-sign-out-alt me-3"></i>Logout</a></li>
+                    </ul>
+                </div>
             </nav>
             <div class="container-fluid px-4">
-<!-- Tabel Data -->
             <div class="row py-2 mx-1">
-                <h3 class="h3 mb-3 text-center pt-3">Tabel Data Laptop</h3>
-                <form method="POST" class="form-group d-flex justify-content-end mb-3">
-                    <input name="pencarian" class="form-control btn-light border-bottom rounded-0 shadow-none w-25" type="text" placeholder="Search" style="background: transparent; border: none; outline: hidden;">
-                    <button name="searchData" type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
-                </form>
+                <h3 class="h3 mb-3 text-center pt-3">Data Laptop</h3>
+                <div class="row">
+                    <div class="col d-flex justify-content-start">
+                        <button type="button" class="btn btn-primary mb-4" style="width: 160px;" data-bs-toggle="modal" data-bs-target="#tambahData"><i class="fas fa-plus-circle me-3"></i>Tambah Data</button>
+                    </div>
+                    <div class="col">
+                        <form method="POST" class="form-group d-flex justify-content-end">
+                            <input name="pencarian" class="form-control border-bottom rounded-0 shadow-none w-50" type="text" placeholder="Search" style="background: transparent; border: none; outline: hidden;">
+                            <button name="searchData" type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+<!-- Tabel Data -->
                 <div class="table-responsive" style="max-height: 65vh;">
-                    <table class="table table-bordered border-dark align-middle mx-auto" style="min-width: 2000px;">		              	
+                    <table class="table table-bordered border-dark align-middle mx-auto text-center" style="min-width: 1000px;">		              	
                         <thead class="bg-4 warna-2 text-center">
                             <tr>
                                 <th>No</th>
-                                <th>ID Laptop</th>
                                 <th>Nama Laptop</th>
                                 <th>Merk</th>
                                 <th>Series</th>
                                 <th>Processor</th>                    
                                 <th>VGA Ciscrete</th>
                                 <th>RAM</th>
-                                <td>Type Storage</td>
-                                <td>Size Storage</td>
-                                <td>Kamera</td>
-                                <td>DVD</td>
-                                <td>Gambar Laptop</td>
                                 <td>Harga</td>
                                 <td>Stok</td>
-                                <th style="width: 50px;">Aksi</th>                    
+                                <th style="width: 160px;">Aksi</th>                    
                             </tr>
                         </thead>
                         <tbody>
@@ -53,7 +65,6 @@
                             $no = 1;
                             $i = 0;
                             while ($row = mysqli_fetch_array($queryRead)){
-                                $gambar = $row['gambar_laptop'];
                                 $id_laptop[$i] = $row['id_laptop'];
                                 $nama_laptop[$i] = $row['nama_laptop'];
                                 $merk[$i] = $row['merk'];
@@ -67,169 +78,28 @@
                                 $dvd[$i] = $row['dvd'];
                                 $harga[$i] = $row['harga'];
                                 $stok[$i] = $row['stok'];
-                                echo '
-                                <form method="POST" class="form-group" enctype="multipart/form-data">
-                                    <div class="invisible position-absolute">
-                                        <input type="text" class="form-control" name="getID" value="'.$id_laptop[$i].'">
-                                    </div>
-                                    <tr>
-                                        <td class="text-center">'.$no++.'</td>
-                                        <td class="text-center">'.$id_laptop[$i].'</td>
-                                        <td class="text-center">'.$nama_laptop[$i].'</td>
-                                        <td class="text-center">'.$merk[$i].'</td>
-                                        <td class="text-center">'.$series[$i].'</td>
-                                        <td class="text-center">'.$processor[$i].'</td>
-                                        <td class="text-center">'.$vga_discrete[$i].'</td>
-                                        <td class="text-center">'.$ram[$i].'GB</td>
-                                        <td class="text-center">'.$type_storage[$i].'</td>
-                                        <td class="text-center">'.$size_storage[$i].'GB</td>
-                                        <td class="text-center">'.$camera[$i].'</td>
-                                        <td class="text-center">'.$dvd[$i].'</td>
-                                        <td class="text-center">'.'';
-                                            if ($gambar=="") {
-                                                echo '';
-                                            } else {
-                                                echo '<img src="../gambarLaptop/'.$gambar.'" style="height: 150px;">';
-                                            }
-                                            echo '
-                                        </td>
-                                        <td>Rp. '.number_format($harga[$i], 0, ',', '.').'</td>
-                                        <td class="text-center">'.$stok[$i].'</td>
-                                        <td>'?>
-                                            <button type="button" class="btn btn-warning my-1" data-bs-toggle="modal" data-bs-target="#edit<?php echo $id_laptop[$i] ?>"><i class="bi bi-pencil-square warna-2"></i></button>
-                                            <button type="button" class="btn btn-danger my-1" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $id_laptop[$i] ?>"><i class="bi bi-trash warna-2"></i></button>
-                                            <?php echo'
-                                            <!-- Edit Modal -->     
-                                            <div class="modal fade" id="edit'.$id_laptop[$i].'" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="editModalLabel">Edit Data Laptop</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="invisible position-absolute">
-                                                                <input type="text" class="form-control" name="id_laptop" value="'.$id_laptop[$i].'">
-                                                            </div>
-                                                            <div class="row">                 
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="firstName" class="form-label">Series</label>
-                                                                    <input type="text" name="series" class="form-control"  value="'.$series[$i].'">
-                                                                </div>
-                                                            </div>
-                                                            <div class="row my-2">
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="firstName" class="form-label">Nama Laptop</label>
-                                                                    <input type="text" name="nama_laptop" class="form-control" value="'.$nama_laptop[$i].'">
-                                                                </div>
-                                                            </div>
-                                                            <div class="row my-2">
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="firstName" class="form-label">Merk</label>
-                                                                    <input type="text" name="merk" class="form-control" value="'.$merk[$i].'">
-                                                                </div>
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="firstName" class="form-label">Processor</label>
-                                                                    <input type="text" name="processor" class="form-control" value="'.$processor[$i].'">
-                                                                </div>
-                                                            </div> 
-                                                            <div class="row my-2">
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="firstName" class="form-label">Type Storage</label>
-                                                                    <select class="form-select" name="type_storage">
-                                                                        <option '?> <?php if ($type_storage[$i] == "SSD") { echo 'selected'; }?> <?php echo ' value="SSD">SSD</option>
-                                                                        <option '?> <?php if ($type_storage[$i] == "HDD") { echo 'selected'; }?> <?php echo ' value="HDD">HDD</option>
-                                                                    </select>
-                                                                </div>   
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="firstName" class="form-label">Size Storage</label>
-                                                                    <input type="text" name="size_storage" class="form-control" value="'.$size_storage[$i].'">
-                                                                </div>
-                                                            </div>  
-                                                            <div class="row my-2">
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="firstName" class="form-label">VGA Discrete</label>
-                                                                    <input type="text" name="vga_discrete" class="form-control" value="'.$vga_discrete[$i].'">
-                                                                </div>
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="firstName" class="form-label">RAM</label>
-                                                                    <input type="number" name="ram" class="form-control" value="'.$ram[$i].'">
-                                                                </div>
-                                                            </div>
-                                                            <div class="row my-2"> 
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="firstName" class="form-label">Kamera</label>
-                                                                    <select class="form-select" name="camera">
-                                                                        <option '?> <?php if ($camera[$i] == "Yes") { echo 'selected'; }?> <?php echo ' value="Yes">Yes</option>
-                                                                        <option '?> <?php if ($camera[$i] == "No") { echo 'selected'; }?> <?php echo ' value="No">No</option>
-                                                                    </select>
-                                                                </div>    
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="firstName" class="form-label">DVD</label>
-                                                                    <select class="form-select" name="dvd">
-                                                                        <option '?> <?php if ($dvd[$i] == "Yes") { echo 'selected'; }?> <?php echo ' value="Yes">Yes</option>
-                                                                        <option '?> <?php if ($dvd[$i] == "No") { echo 'selected'; }?> <?php echo ' value="No">No</option>
-                                                                    </select>
-                                                                </div> 
-                                                            </div>
-                                                            <div class="row my-2">
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="gambar_laptop" class="form-label">Gambar Laptop</label>
-                                                                    <input type="file" name="gambar_laptop" class="form-control">
-                                                                </div>  
-                                                                <div class="col px-auto mx-2">
-                                                                    <label for="firstName" class="form-label">Harga</label>
-                                                                    <input type="number" name="harga" class="form-control" value="'.$harga[$i].'">
-                                                                </div>  
-                                                            </div> 
-                                                            <div class="row mt-3">  
-                                                                <div class="col-md-12 d-flex justify-content-end">
-                                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertEditModal">Simpan</button>
-                                                                </div>                                     
-                                                            </div>   
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Tombol Konfirmasi Edit-->
-                                            <div class="modal fade" id="alertEditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">PEMBERITAHUAN !</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            Edit data?
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
-                                                            <button type="submit" class="btn btn-primary" name="editData">Edit</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>    
-                                            <!-- Tombol Konfirmasi Hapus -->
-                                            <div class="modal fade" id="hapus'.$id_laptop[$i].'" tabindex="-1" aria-labelledby="alertHapusModal" aria-hidden="true">
-                                                <div class="modal-dialog modal-sm modal-dialog-centered">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">PEMBERITAHUAN !</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            Hapus data '.$id_laptop[$i++].' ?<br>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
-                                                            <button name="hapusData" type="submit" class="btn btn-primary">Hapus</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>                
-                                    </tr>
-                                </form>';
+                                $gambar[$i] = $row['gambar_laptop']; 
+                                ?>
+                                <div class="invisible position-absolute">
+                                    <input type="text" class="form-control" name="id_laptop" value="<?php echo $id_laptop[$i] ?>" readonly>
+                                </div>
+                                <tr>
+                                    <td><?php echo $no++ ?></td>
+                                    <td><?php echo $nama_laptop[$i] ?></td>
+                                    <td><?php echo $merk[$i] ?></td>
+                                    <td><?php echo $series[$i] ?></td>
+                                    <td><?php echo $processor[$i] ?></td>
+                                    <td><?php echo $vga_discrete[$i] ?></td>
+                                    <td><?php echo $ram[$i] ?>GB</td>
+                                    <td>Rp. <?php echo number_format($harga[$i], 0, ',', '.')?></td>
+                                    <td><?php echo $stok[$i] ?></td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detail<?php echo $id_laptop[$i] ?>" readonly><i class="fas fa-search warna-2"></i></button>
+                                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit<?php echo $id_laptop[$i] ?>" readonly><i class="bi bi-pencil-square warna-2"></i></button>
+                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $id_laptop[$i] ?>" readonly><i class="bi bi-trash warna-2"></i></button>
+                                        <?php include 'M_Laptop.php'; ?>
+                                    </td>                
+                                </tr><?php
                             }
                         ?>                                   
                         </tbody>
