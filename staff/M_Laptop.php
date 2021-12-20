@@ -209,6 +209,49 @@
                         <h5 class="modal-title" id="editModalLabel">Edit Data Laptop</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <img src="../gambarLaptop/<?php echo $gambar[$i] ?>" style="height: 150px;">
+                        </div>
+                        <div class="invisible position-absolute">
+                            <input type="text" class="form-control" name="id_laptop" value="<?php echo $id_laptop[$i] ?>">
+                        </div>
+                        <div class="row">                 
+                            <div class="col px-auto mx-2">
+                                <label for="firstName" class="form-label">Series</label>
+                                <input type="text" name="series" class="form-control"  value="<?php echo $series[$i] ?>">
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col px-auto mx-2">
+                                <label for="firstName" class="form-label">Nama Laptop</label>
+                                <input type="text" name="nama_laptop" class="form-control" value="<?php echo $nama_laptop[$i] ?>">
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col px-auto mx-2">
+                                <label for="firstName" class="form-label">Merk</label>
+                                <input type="text" name="merk" class="form-control" value="<?php echo $merk[$i] ?>">
+                            </div>
+                            <div class="col px-auto mx-2">
+                                <label for="firstName" class="form-label">Processor</label>
+                                <input type="text" name="processor" class="form-control" value="<?php echo $processor[$i] ?>">
+                            </div>
+                        </div> 
+                        <div class="row my-2">
+                            <div class="col px-auto mx-2">
+                                <label for="firstName" class="form-label">Type Storage</label>
+                                <select class="form-select" name="type_storage">
+                                    <option <?php if ($type_storage[$i] == "SSD") { echo 'selected'; }?> value="SSD">SSD</option>
+                                    <option <?php if ($type_storage[$i] == "HDD") { echo 'selected'; }?> value="HDD">HDD</option>
+                                </select>
+                            </div>   
+                            <div class="col px-auto mx-2">
+                                <label for="firstName" class="form-label">Size Storage</label>
+                                <input type="number" name="size_storage" class="form-control" value="<?php echo $size_storage[$i] ?>">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
