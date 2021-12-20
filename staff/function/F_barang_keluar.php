@@ -21,3 +21,5 @@
         $queryID = mysqli_query($koneksi, "SELECT max(id_keluar) as id_terbesar FROM barang_keluar");
         $data = mysqli_fetch_array($queryID);
         $id_keluar = $data['id_terbesar'];
+        $urutan = (int) substr($id_keluar, 3, 7);
+        $urutan++;
