@@ -10,33 +10,31 @@
     }
 ?>
 <!-- Sidebar -->
-        <div class="bg-4" id="sidebar-wrapper">
-            <div class="list-group list-group-flush my-3">
-                <a href="index.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('index.php');?>"><i class="bi bi-house me-2"></i>Dashboard</a>
-                <a href="data_laptop.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('data_laptop.php');?>"><i class="bi bi-laptop me-2"></i>Data Laptop</a>
-                <a href="barang_masuk.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('barang_masuk.php');?>"><i class="bi bi-box-arrow-in-down me-2"></i>Barang Masuk</a>
-                <a href="barang_keluar.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('barang_keluar.php');?>"><i class="bi bi-box-arrow-up me-2"></i>Barang Keluar</a>
-                <a href="rekap_transaksi.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('rekap_transaksi.php');?>"><i class="bi bi-box-arrow-in-down me-2"></i>Riwayat Transaksi</a>
-                <a href="kelola_user.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('kelola_user.php');?>"><i class="bi bi-box-arrow-in-down me-2"></i>Kelola User</a>
-                <a href="../logout.php" class="list-group-item list-group-item-action bg-4 text-danger fw-bold"
-                onclick="return confirm('Keluar ?')"><i class="bi bi-door-open me-2"></i>Keluar</a>
-            </div>
+    <div class="bg-4" id="sidebar-wrapper">
+        <div class="list-group list-group-flush my-3">
+            <a href="index.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('index.php');?>"><i class="bi bi-house me-2"></i>Dashboard</a>
+            <a href="data_laptop.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('data_laptop.php');?>"><i class="bi bi-laptop me-2"></i>Data Laptop</a>
+            <a href="barang_masuk.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('barang_masuk.php');?>"><i class="bi bi-box-arrow-in-down me-2"></i>Barang Masuk</a>
+            <a href="barang_keluar.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('barang_keluar.php');?>"><i class="bi bi-box-arrow-up me-2"></i>Barang Keluar</a>
+            <a href="rekap_transaksi.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('rekap_transaksi.php');?>"><i class="bi bi-box-arrow-in-down me-2"></i>Riwayat Transaksi</a>
+            <a href="kelola_user.php" class="list-group-item list-group-item-action bg-4 fw-bold <?php active('kelola_user.php');?>"><i class="bi bi-people me-2"></i>Kelola User</a>
         </div>
-        <form method="POST">
-            <div class="modal fade" id="edit<?php echo $id_user ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Pengaturan User</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <form method="POST">
+        <div class="modal fade" id="edit<?php echo $id_user ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Pengaturan User</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="invisible position-absolute">
+                            <input type="text" class="form-control" name="id_user" value="<?php echo $rowSet['id_user'] ?>">
                         </div>
-                        <div class="modal-body">
-                            <div class="invisible position-absolute">
-                                <input type="text" class="form-control" name="id_user" value="<?php echo $rowSet['id_user'] ?>">
-                            </div>
-                            <div class="row">
-                                <div class="col-5 mt-1"><label>Nama</label></div>
-                                <div class=col>
+                        <div class="row">
+                            <div class="col-5 mt-1"><label>Nama</label></div>
+                            <div class=col>
                                 <input class="form-control" name="nama" type="text" value="<?php echo $rowSet['nama'] ?>"><br>
                             </div>
                             </div>
@@ -45,7 +43,7 @@
                             <div class=col>
                                 <input class="form-control" name="no_hp" type="text" value="<?php echo $rowSet['no_hp'] ?>"><br>
                             </div>
-                            </div>
+                        </div>
                         <div class="row mt-4">
                             <div class="col-5 mt-1"><label>Password Lama</label></div>
                             <div class=col>
