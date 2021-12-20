@@ -82,3 +82,42 @@
             </div>
         </div>
     </div>
+<!-- Modal Tambah Data -->
+    <form method="POST" enctype="multipart/form-data">
+        <div class="modal fade" id="tambahData" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="headerLabel">Tambah Data Laptop</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-start">
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>Series</label></div>
+                            <div class=col>
+                                <input type="text" class="form-control form-box" name="series">
+                            </div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>Nama Laptop</label></div>
+                            <div class=col>
+                                <input type="text" class="form-control form-box" name="nama_laptop">
+                            </div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>Merk</label></div>
+                            <div class=col>
+                                <input type="text" class="form-control form-box" name="merk">
+                            </div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>Processor</label></div>
+                            <div class=col>
+                                <input type="text" class="form-control form-box" name="processor">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
