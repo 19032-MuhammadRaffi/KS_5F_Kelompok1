@@ -39,6 +39,45 @@
                             <input type="text" class="form-control" value="<?php echo $processor[$i] ?>" readonly>
                         </div>
                     </div>
+                    <div class="row my-2">
+                        <div class="col px-auto mx-2">
+                            <label for="firstName" class="form-label">Type Storage</label>
+                            <input type="text" class="form-control" value="<?php echo $type_storage[$i] ?>" readonly>
+                        </div>   
+                        <div class="col px-auto mx-2">
+                            <label for="firstName" class="form-label">Size Storage</label>
+                            <input type="text" class="form-control" value="<?php echo $size_storage[$i] ?>GB" readonly>
+                        </div>
+                    </div>  
+                    <div class="row my-2">
+                        <div class="col px-auto mx-2">
+                            <label for="firstName" class="form-label">VGA Discrete</label>
+                            <input type="text" class="form-control" value="<?php echo $vga_discrete[$i] ?>" readonly>
+                        </div>
+                    </div>
+                    <div class="row my-2"> 
+                        <div class="col px-auto mx-2">
+                            <label for="firstName" class="form-label">RAM</label>
+                            <input type="text" class="form-control" value="<?php echo $ram[$i] ?>GB" readonly>
+                        </div>
+                        <div class="col px-auto mx-2">
+                            <label for="firstName" class="form-label">Kamera</label>
+                            <input type="text" class="form-control" value="<?php echo $camera[$i] ?>" readonly>
+                        </div>    
+                        <div class="col px-auto mx-2">
+                            <label for="firstName" class="form-label">DVD</label>
+                            <input type="text" class="form-control" value="<?php echo $dvd[$i] ?>" readonly>
+                        </div> 
+                        <div class="col px-auto mx-2">
+                            <label for="firstName" class="form-label">Stok</label>
+                            <input type="text" class="form-control" value="<?php echo $stok[$i] ?>" readonly>
+                        </div>
+                    </div>
+                    <div class="row mt-3">  
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>                                     
+                    </div>
                 </div>
             </div>
         </div>
