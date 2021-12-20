@@ -38,7 +38,7 @@
                             <label for="firstName" class="form-label">Processor</label>
                             <input type="text" class="form-control" value="<?php echo $processor[$i] ?>" readonly>
                         </div>
-                    </div>
+                    </div> 
                     <div class="row my-2">
                         <div class="col px-auto mx-2">
                             <label for="firstName" class="form-label">Type Storage</label>
@@ -77,7 +77,7 @@
                         <div class="col-md-12 d-flex justify-content-end">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>                                     
-                    </div>
+                    </div>   
                 </div>
             </div>
         </div>
@@ -199,7 +199,7 @@
                 </div>
             </div>
         </div>
-    </form>
+    </form> 
 <!-- Edit Modal -->     
     <form method="POST" class="form-group" enctype="multipart/form-data">
         <div class="modal fade text-start" id="edit<?php echo $id_laptop[$i] ?>" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
@@ -250,7 +250,7 @@
                                 <label for="firstName" class="form-label">Size Storage</label>
                                 <input type="number" name="size_storage" class="form-control" value="<?php echo $size_storage[$i] ?>">
                             </div>
-                        </div>
+                        </div>  
                         <div class="row my-2">
                             <div class="col px-auto mx-2">
                                 <label for="firstName" class="form-label">VGA Discrete</label>
@@ -291,7 +291,7 @@
                             <div class="col-md-12 d-flex justify-content-end">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertEditModal<?php echo $id_laptop[$i] ?>">Simpan</button>
                             </div>                                     
-                        </div>
+                        </div>   
                     </div>
                 </div>
             </div>
@@ -312,8 +312,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </div>  
+    </form>  
 <!-- Tombol Konfirmasi Hapus -->
     <form method="POST" class="form-group" enctype="multipart/form-data">
         <div class="modal fade text-start" id="hapus<?php echo $id_laptop[$i] ?>" tabindex="-1" aria-labelledby="alertHapusModal" aria-hidden="true">
