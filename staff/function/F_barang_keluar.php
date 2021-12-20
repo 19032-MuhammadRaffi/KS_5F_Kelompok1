@@ -31,4 +31,12 @@
         $jumlah = $_POST['jumlah'];
         $queryCreate = "INSERT INTO barang_keluar VALUES ('$id_keluar','$id_user','$id_laptop',NOW(),'$nama_user','$jumlah','Keluar')";
         $queryUpdate = "UPDATE data_laptop SET stok=stok-$jumlah WHERE id_laptop='$id_laptop'";
-        $createData = mysqli_query($koneksi, $queryCreate);
+        $createData = mysqli_query($$updateData = mysqli_query($koneksi, $queryUpdate);
+        $updateData = mysqli_query($koneksi, $queryUpdate);
+        if ($createData AND $updateData){
+            echo "<script>alert('Transaksi berhasil diproses!')
+            window.location.replace('barang_keluar.php');</script>";
+        }
+    }
+        
+        
