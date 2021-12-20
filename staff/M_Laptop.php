@@ -116,6 +116,68 @@
                                 <input type="text" class="form-control form-box" name="processor">
                             </div>
                         </div>
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>VGA Discrete</label></div>
+                            <div class=col>
+                                <input type="text" class="form-control form-box" name="vga_discrete">
+                            </div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>RAM</label></div>
+                            <div class=col>
+                                <input type="number" class="form-control form-box" name="ram">
+                            </div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>Type Storage</label></div>
+                            <div class=col>
+                                <select class="form-select" name="type_storage">
+                                    <option value="SSD">SSD</option>
+                                    <option value="HDD">HDD</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>Size Storage</label></div>
+                            <div class=col>
+                                <input type="number" class="form-control form-box" name="size_storage">
+                            </div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>Camera</label></div>
+                            <div class=col>
+                                <select class="form-select" name="camera">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>DVD</label></div>
+                            <div class=col>
+                                <select class="form-select" name="dvd">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>Gambar Laptop</label></div>
+                            <div class=col>
+                                <input type="file" class="form-control form-box" name="gambar_laptop">
+                            </div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col-5 mt-1"><label>Harga</label></div>
+                            <div class=col>
+                                <input type="number" class="form-control form-box" name="harga">
+                            </div>
+                        </div>
+                        <div class="row mt-3">  
+                            <div class="col-md-12 d-flex justify-content-end">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertTambahModal">Simpan</button>
+                            </div>                                     
+                        </div>
                     </div>
                 </div>
             </div>
