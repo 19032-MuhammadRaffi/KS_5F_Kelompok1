@@ -29,3 +29,6 @@
         $id_user = $_SESSION['id_user'];
         $nama_user = $_SESSION['nama'];
         $jumlah = $_POST['jumlah'];
+        $queryCreate = "INSERT INTO barang_keluar VALUES ('$id_keluar','$id_user','$id_laptop',NOW(),'$nama_user','$jumlah','Keluar')";
+        $queryUpdate = "UPDATE data_laptop SET stok=stok-$jumlah WHERE id_laptop='$id_laptop'";
+        $createData = mysqli_query($koneksi, $queryCreate);
