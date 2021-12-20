@@ -23,3 +23,5 @@
         $id_keluar = $data['id_terbesar'];
         $urutan = (int) substr($id_keluar, 3, 7);
         $urutan++;
+        $huruf = "KLR";
+        $id_keluar = $huruf . sprintf("%07s", $urutan);
