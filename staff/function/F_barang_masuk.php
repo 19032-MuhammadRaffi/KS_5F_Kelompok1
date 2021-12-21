@@ -39,4 +39,8 @@
             window.location.replace('barang_masuk.php');</script>";
         }
     }
+//Pencarian Data
+    if(isset($_POST["searchData"])){
+        $cari = $_POST["pencarian"];
+        $queryRead = mysqli_query($koneksi, "SELECT id_laptop, series, nama_laptop, stok FROM data_laptop WHERE 
         
