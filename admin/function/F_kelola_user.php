@@ -22,4 +22,54 @@
         }
     }
 
+//EDIT USER
+    if(isset($_POST["editUser"])){
+        $id_user = $_POST["id_user"];
+        $password = $_POST["password"];
+        $nama = $_POST["nama"];
+        $no_hp = $_POST["no_hp"];
+        $hak_akses = $_POST["hak_akses"];
+        if ($password==""){
+            $queryUpdate = "UPDATE user SET nama='$nama', no_hp='$no_hp', hak_akses='$hak_akses' WHERE id_user='$id_user'";
+            $executeUpdate = mysqli_query($koneksi, $queryUpdate) or die($koneksi);
+            if ($executeUpdate){
+                echo "
+                    <script>
+                        alert('Berhasil Update Data User $id_user !');
+                        document.location.href = 'kelola_user.php';
+                    </script>
+                ";
+            }
+            else {
+                echo "
+                    <script>
+                        alert('Gagal Update Data User $id_user !');
+                        document.location.href = 'kelola_user.php';
+                    </script>
+                ";
+            }
+        } else {
+            $queryUpdate = "UPDATE user SET password=SHA1('$password'), nama='$nama', no_hp='$no_hp', hak_akses='$hak_akses' WHERE id_user='$id_user'";
+            $executeUpdate = mysqli_query($koneksi, $queryUpdate) or die($koneksi);
+            if ($executeUpdate){
+                echo "
+                    <script>
+                        alert('Berhasil Update Data User $id_user !');
+                        document.location.href = 'kelola_user.php';
+                    </script>
+                ";
+            }
+            else {
+                echo "
+                    <script>
+                        alert('Gagal Update Data User $id_user !');
+                        document.location.href = 'kelola_user.php';
+                    </script>
+                ";
+            }
+        }
+    }
+
+
+
 ?>
