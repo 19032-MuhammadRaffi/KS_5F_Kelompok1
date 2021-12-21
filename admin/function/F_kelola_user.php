@@ -69,6 +69,27 @@
             }
         }
     }
+//HAPUS DATA
+    if(isset($_POST["hapusUser"])){
+            $id_user = $_POST['id_user'];
+            $queryHapus = mysqli_query($koneksi, "DELETE FROM user WHERE id_user = '$id_user'") or die($koneksi);
+            if ($queryHapus){
+                echo "
+                    <script>
+                        alert('Berhasil Menghapus User!');
+                        document.location.href = 'kelola_user.php';
+                    </script>
+                ";
+            }
+            else{
+                echo "
+                    <script>
+                        alert('Gagal Menghapus User!');
+                        document.location.href = 'kelola_user.php';
+                    </script>
+                ";
+            }
+        }
 
 
 
