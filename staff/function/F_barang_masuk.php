@@ -7,7 +7,7 @@
 //Read ID_Laptop
     $queryID = mysqli_query($koneksi, "SELECT id_laptop FROM data_laptop");
 //Transaksi
-    $nowID = "";    
+    $nowID = "";
     if(isset($_POST["pilihID"])){
         $id_laptop = $_POST['id_laptop'];
         $nowID = $id_laptop;
