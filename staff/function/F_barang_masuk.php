@@ -34,3 +34,9 @@
         $queryUpdate = "UPDATE data_laptop SET stok=stok+$jumlah WHERE id_laptop='$id_laptop'";
         $createData = mysqli_query($koneksi, $queryCreate);
         $updateData = mysqli_query($koneksi, $queryUpdate);
+        if ($createData AND $updateData){
+            echo "<script>alert('Transaksi berhasil diproses!')
+            window.location.replace('barang_masuk.php');</script>";
+        }
+    }
+        
