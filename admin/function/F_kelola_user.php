@@ -91,6 +91,10 @@
             }
         }
 
-
+//Pencarian Data
+     if(isset($_POST["searchData"])){
+            $cari = $_POST["pencarian"];
+            $queryRead = mysqli_query($koneksi, "SELECT * FROM user WHERE id_user LIKE '%$cari%' OR nama LIKE '%$cari%' OR no_hp LIKE '%$cari%' OR hak_akses LIKE '%$cari%'");
+        }
 
 ?>
