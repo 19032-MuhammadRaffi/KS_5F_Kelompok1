@@ -1,0 +1,265 @@
+*{
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	color: #fff;
+}
+.navbar {
+	overflow: hidden;
+	background-color: #0773C4;
+	position: fixed; /* Set the navbar to fixed position */
+	top: 0; /* Position the navbar at the top of the page */
+	width: 100%; /* Full width */
+  }
+h1,h2,h3,h4,h5,h6{
+	font-weight: 500;
+}
+i{
+	margin-right: 10px;
+}
+header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #0773C4;
+	width: 100%;
+	height: 80px;
+	flex-wrap: wrap;
+}
+.logo h2{
+	font-size: 2.5em;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+	margin: 0 16px;
+}
+.nav-item a{
+	font-size: 1em;
+}
+.btn{
+	border: solid 1px white;
+	padding: 4px 16px;
+	border-radius: 20px;
+	background-color: white;
+	color: black;
+	font-size: 1.25em;
+}
+.banner{
+	width: 100%;
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.text-banner{
+	width: 70%;
+}
+.text-banner h1{
+	font-size: 4.05em;
+}
+.text-banner p{
+	font-size: 1.25em;
+	line-height: 2;
+}
+.galery{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: #e5e5e5;
+	padding: 5% 0;
+}
+.title{
+	text-align: center;
+}
+.title h3{
+	font-size: 2.5em;
+	color: black;
+	margin-bottom: 10px;
+}
+.product{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+	padding: 0 10%;
+}
+.galery-item{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 3em;
+	height: auto;
+}
+.img-galery{
+	width: 250px;
+	height: 370px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.img-galery img{
+	width: 100%;
+}
+.detail-item{
+	background-color: #0773C4;
+	width: 180px;
+	margin: -15% 0;
+	padding: 16px;
+	border-radius: 10px;
+	line-height: 1.5;
+}
+.detail-item > h4,h5,h6{
+	font-size: 16px;
+}
+.detail-item p{
+	font-size: 14px;
+}
+footer{
+	width: 100%;
+	background-color: black;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	padding: 1% 15%;
+}
+.top-footer{
+	display: flex;
+	justify-content: space-around;
+	border-bottom: solid 1px white;
+	padding: 10px;
+	align-items: center;
+}
+.top-footer h2{
+	font-size: 2.5em;
+}
+.top-footer p{
+	font-size: 1.25em;
+}
+.bottom-footer{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
+.bottom-footer h4{
+	font-size: 1.5em;
+}
+.information,.follow,.contact{
+	flex-basis: 33,3%;
+	padding: 1% 0;
+}
+.follow ul li{
+	display: inline;
+	margin: 0 4px;
+}
+.contact form{
+	display: flex;
+	flex-direction: column;
+}
+.info,.sosial-media{
+	list-style: none;
+}
+.bottom-footer ul li{
+	font-size: 1.25em;
+}
+.contact form{
+	line-height: 2;
+}
+.contact-label{
+	font-size: 1,2em;
+}
+.contact form input{
+	width: 100%;
+	height: 2.5em;
+	border: none;
+	border-bottom: solid 1px white;
+	background-color: transparent;
+	margin-bottom: 20px;
+	font-size: 1em;
+	padding: 0 5px;
+}
+.contact form input:hover{
+	outline: none;
+}
+.contact form input:focus{
+	outline: none;
+}
+.contact form > .button{
+	display: flex;
+	justify-content: flex-end;
+}
+@media (max-width: 900px){
+	.banner{
+		height: 50vh;
+	}
+	.galery-item{
+	margin: 2em;
+	}	
+	.top-footer{
+		flex-direction: column;
+		text-align: center;
+	}
+	.bottom-footer{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.information,.follow,.contact{
+		width: 100%;
+		margin: 10px 0;
+	}
+	a{
+	color: inherit;
+	text-decoration: none;
+	margin: 0 8px;
+	}
+	.logo h2{
+	font-size: 1em;
+	}
+	.nav-item a{
+	font-size: 0.5em;
+	}
+	.text-banner h1{
+		font-size: 2em;
+	}
+	.text-banner p{
+		font-size: 0.5em;
+		line-height: 2;
+	}
+	.title h3{
+		font-size: 1.5em;
+		margin-bottom: -20px;
+	}
+	.detail-item > h4,h5,h6{
+		font-size: 1em;
+	}
+	.detail-item p{
+		font-size: 0.5em;
+	}
+	.top-footer h2{
+		font-size: 1em;
+	}
+	.top-footer p{
+		font-size: 0.7em;
+	}
+	.bottom-footer h4{
+		font-size: 0.8em;
+	}
+	.bottom-footer ul li{
+		font-size: 0.7em;
+	}
+	.contact-label{
+		font-size: 0.7em;
+	}
+	footer{
+		padding: 1% 5%;
+	}
+}
