@@ -4,7 +4,7 @@
     if (isset($_POST["signIn"])){
         $id_user = $_POST["id_user"];
         $pass = $_POST["password"];
-        $signin = "SELECT * FROM user WHERE id_user='$id_user' AND password=SHA1('$pass',512)";
+        $signin = "SELECT * FROM user WHERE id_user='$id_user' AND password=SHA1('$pass')";
         $result = mysqli_query($koneksi, $signin);
         
         if(mysqli_num_rows($result) === 1){
@@ -28,7 +28,7 @@
         if (isset($error)){
             ?>
                 <script>
-                alert("Username atau Password yang anda masukkan salah!");
+                alert("Username/Password salah!");
                 </script>
             <?php
         }
