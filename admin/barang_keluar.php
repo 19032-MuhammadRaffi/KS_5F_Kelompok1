@@ -1,12 +1,12 @@
 <?php
-    require 'function/F_barang_keluar.php';
+    require 'function/F_barang_masuk.php';
 ?>
 <html>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/styles.css" />
-    <title>Barang Keluar</title>
+    <title>Barang Masuk</title>
 </head>
 <body>
     <div class="d-flex" id="wrapper">
@@ -32,7 +32,7 @@
             <div class="container-fluid px-4">
                 <div class="row px-3">
                     <div class="py-2 border-bottom">
-                        <h1 class="h1 text-center">Transaksi Barang Keluar</h1>
+                        <h1 class="h1 text-center">Transaksi Barang Masuk</h1>
                     </div>
                     <div class="row px-3 pt-3 pb-4" style="background: white; border-radius: 1em">
                         <div class="col-lg-12">
@@ -75,9 +75,9 @@
                                         </table>
                                     </div>                                         
                                 </div>
-<!-- Form Transaksi Keluar -->                                
+<!-- Form Transaksi Masuk -->                                
                                 <div class="col-lg-3">
-                                    <h3 class="h4 mb-3 text-center">Form Barang Keluar</h3>
+                                    <h3 class="h4 mb-3 text-center">Form Barang Masuk</h3>
                                     <form method="POST" class="form-group">
                                         <label class="form-label mt-2">ID Laptop</label> 
                                         <div class="d-flex justify-content">
@@ -109,7 +109,7 @@
                                                     <div class="modal-body">Proses Transaksi Barang ?</div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                                        <button name="prosesKeluar" type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertModal1">Proses</button>
+                                                        <button name="prosesMasuk" type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertModal">Proses</button>
                                                     </div>
                                                 </div>
                                             </div>
