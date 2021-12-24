@@ -37,6 +37,7 @@
 }
 #wrapper {
       overflow-x: hidden;
+      scroll-behavior: smooth;
 }
 #sidebar-wrapper {
     min-height: 100vh;
