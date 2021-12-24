@@ -11,7 +11,7 @@
         exit;
     }
     else{
-        header("Location: login.php");
+        header("Location: landing_page.php");
         exit;
     }
 ?>
