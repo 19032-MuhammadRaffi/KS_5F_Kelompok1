@@ -21,8 +21,7 @@
             window.location.replace('kelola_user.php');</script>";
         }
     }
-
-//EDIT USER
+//Edit Data Laptop
     if(isset($_POST["editUser"])){
         $id_user = $_POST["id_user"];
         $password = $_POST["password"];
@@ -69,32 +68,30 @@
             }
         }
     }
-//HAPUS DATA
+//Delete Data Laptop
     if(isset($_POST["hapusUser"])){
-            $id_user = $_POST['id_user'];
-            $queryHapus = mysqli_query($koneksi, "DELETE FROM user WHERE id_user = '$id_user'") or die($koneksi);
-            if ($queryHapus){
-                echo "
-                    <script>
-                        alert('Berhasil Menghapus User!');
-                        document.location.href = 'kelola_user.php';
-                    </script>
-                ";
-            }
-            else{
-                echo "
-                    <script>
-                        alert('Gagal Menghapus User!');
-                        document.location.href = 'kelola_user.php';
-                    </script>
-                ";
-            }
+        $id_user = $_POST['id_user'];
+        $queryHapus = mysqli_query($koneksi, "DELETE FROM user WHERE id_user = '$id_user'") or die($koneksi);
+        if ($queryHapus){
+            echo "
+                <script>
+                    alert('Berhasil Menghapus User!');
+                    document.location.href = 'kelola_user.php';
+                </script>
+            ";
         }
-
+        else{
+            echo "
+                <script>
+                    alert('Gagal Menghapus User!');
+                    document.location.href = 'kelola_user.php';
+                </script>
+            ";
+        }
+    }
 //Pencarian Data
-     if(isset($_POST["searchData"])){
-            $cari = $_POST["pencarian"];
-            $queryRead = mysqli_query($koneksi, "SELECT * FROM user WHERE id_user LIKE '%$cari%' OR nama LIKE '%$cari%' OR no_hp LIKE '%$cari%' OR hak_akses LIKE '%$cari%'");
-        }
-
+    if(isset($_POST["searchData"])){
+        $cari = $_POST["pencarian"];
+        $queryRead = mysqli_query($koneksi, "SELECT * FROM user WHERE id_user LIKE '%$cari%' OR nama LIKE '%$cari%' OR no_hp LIKE '%$cari%' OR hak_akses LIKE '%$cari%'");
+    }
 ?>
