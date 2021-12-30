@@ -98,11 +98,6 @@
                                 <input type="text" class="form-control form-box" name="series">
                             </div>
                         </div>
-                        <div class="row py-1">
-                            <div class="col-5 mt-1"><label>Nama Laptop</label></div>
-                            <div class=col>
-                                <input type="text" class="form-control form-box" name="nama_laptop">
-                            </div>
                         </div>
                         <div class="row py-1">
                             <div class="col-5 mt-1"><label>Merk</label></div>
@@ -314,23 +309,3 @@
             </div>
         </div>  
     </form>  
-<!-- Tombol Konfirmasi Hapus -->
-    <form method="POST" class="form-group" enctype="multipart/form-data">
-        <div class="modal fade text-start" id="hapus<?php echo $id_laptop[$i] ?>" tabindex="-1" aria-labelledby="alertHapusModal" aria-hidden="true">
-            <div class="modal-dialog modal-sm modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Pemberitahuan</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Hapus data <?php echo $id_laptop[$i] ?> ?<br>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                        <button name="hapusData" type="submit" class="btn btn-primary">Yes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
