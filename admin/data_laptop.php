@@ -42,9 +42,6 @@
                             <button name="searchData" type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                        <button name="hapusData" type="submit" class="btn btn-primary">Yes</button>
                 </div>
 <!-- Tabel Data -->
                 <div class="table-responsive" style="max-height: 65vh;">
@@ -95,7 +92,13 @@
                                     <td><?php echo $vga_discrete[$i] ?></td>
                                     <td><?php echo $ram[$i] ?>GB</td>
                                     <td>Rp. <?php echo number_format($harga[$i], 0, ',', '.')?></td>
-                                    <td><?php echo $stok[$i] ?></td>         
+                                    <td><?php echo $stok[$i] ?></td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detail<?php echo $id_laptop[$i] ?>" readonly><i class="fas fa-search warna-2"></i></button>
+                                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit<?php echo $id_laptop[$i] ?>" readonly><i class="bi bi-pencil-square warna-2"></i></button>
+                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $id_laptop[$i] ?>" readonly><i class="bi bi-trash warna-2"></i></button>
+                                        <?php include 'M_Laptop.php'; ?>
+                                    </td>                
                                 </tr><?php
                             }
                         ?>                                   
