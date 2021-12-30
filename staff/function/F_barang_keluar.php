@@ -31,15 +31,14 @@
         $jumlah = $_POST['jumlah'];
         $queryCreate = "INSERT INTO barang_keluar VALUES ('$id_keluar','$id_user','$id_laptop',NOW(),'$nama_user','$jumlah','Keluar')";
         $queryUpdate = "UPDATE data_laptop SET stok=stok-$jumlah WHERE id_laptop='$id_laptop'";
-        $createData = mysqli_query($$updateData = mysqli_query($koneksi, $queryUpdate);
+        $createData = mysqli_query($koneksi, $queryCreate);
         $updateData = mysqli_query($koneksi, $queryUpdate);
         if ($createData AND $updateData){
             echo "<script>alert('Transaksi berhasil diproses!')
             window.location.replace('barang_keluar.php');</script>";
         }
     }
-                                   
- //Pencarian Data
+//Pencarian Data
     if(isset($_POST["searchData"])){
         $cari = $_POST["pencarian"];
         $queryRead = mysqli_query($koneksi, "SELECT id_laptop, series, nama_laptop, stok FROM data_laptop WHERE 
@@ -48,4 +47,3 @@
         	series LIKE '%$cari%'");
     }
 ?>
-        
