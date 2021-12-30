@@ -111,13 +111,6 @@
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                                                         <button name="prosesMasuk" type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alertModal">Proses</button>
                                                     </div>
-                                                     </div>
-                                                         <div class="modal-body text-start">
-                                                            <div class="row py-1">
-                                                            <div class="col-5 mt-1"><label>ID User</label></div>
-                                                            <div class=col>
-                                                            <input type="text" class="form-control form-box" name="id_user">
-                                                       </div>
                                                 </div>
                                             </div>
                                         </div> 
