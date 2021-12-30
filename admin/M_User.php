@@ -58,6 +58,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        Data sudah benar ?
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
@@ -134,3 +135,26 @@
             </div>
         </div>  
     </form>  
+<!-- Tombol Konfirmasi Hapus -->
+    <form method="POST" class="form-group">
+        <div class="invisible position-absolute">
+            <input type="text" class="form-control" name="id_user" value="<?php echo $row['id_user'] ?>" readonly>
+        </div>
+        <div class="modal fade text-start" id="hapusUser<?php echo $row['id_user'] ?>" tabindex="-1" aria-labelledby="alertHapusModal" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Pemberitahuan</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Hapus data <?php echo $row['id_user'] ?> ?<br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <button name="hapusUser" type="submit" class="btn btn-primary">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
