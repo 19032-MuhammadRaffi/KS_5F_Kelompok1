@@ -119,6 +119,5 @@
             el.classList.toggle("toggled");
         };
     </script>
-    
 </body>
 </html>
