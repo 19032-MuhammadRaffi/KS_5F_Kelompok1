@@ -28,6 +28,9 @@
                         <li><a class="dropdown-item text-danger" href="../logout.php" name="logout"><i class="fas fa-sign-out-alt me-3"></i>Logout</a></li>
                     </ul>
                 </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <button name="hapusData" type="submit" class="btn btn-primary">Yes</button>
             </nav>
             <div class="container px-4">
             <div class="row py-2 mx-1">
@@ -55,25 +58,7 @@
                                 <th style="width: 110px;">Aksi</th>                    
                             </tr>
                         </thead>
-                        <tbody>
-                        <?php
-                            $no = 1;
-                            $i = 0;
-                            while ($row = mysqli_fetch_array($queryRead)){
-                                ?>
-                                <tr>
-                                    <td><?php echo $no++ ?></td>
-                                    <td><?php echo $row['nama'] ?></td>
-                                    <td><?php echo $row['no_hp'] ?></td>
-                                    <td><?php echo $row['hak_akses'] ?></td>
-                                    <td>
-                                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editUser<?php echo $row['id_user'] ?>"><i class="bi bi-pencil-square warna-2"></i></button>
-                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusUser<?php echo $row['id_user'] ?>"><i class="bi bi-trash warna-2"></i></button>
-                                        <?php include 'M_User.php'; ?>
-                                    </td>                
-                                </tr><?php
-                            }
-                        ?>                                   
+                        <tbody>                                
                         </tbody>
                     </table>
                 </div>  	
