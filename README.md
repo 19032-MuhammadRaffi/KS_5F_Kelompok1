@@ -1,13 +1,13 @@
 # PROJEK UAS 
 - Website : http://ks-5f-kelompok1.great-site.net/
+- Tema : Sistem Informasi Stok Barang
+-	Jenis Barang : Laptop
 # Mata Kuliah
 Keamanan Sistem
 # Dosen
 Purwantoro, M.Kom.
 
 # KS_5F_Kelompok1
--	Tema : Sistem Informasi Stok Barang
--	Jenis Barang : Laptop
 -	Ketua : Muhammad Raffi (1910631170032)
 -	Anggota :
   1. Haikal Hidayatullah (1910631170192)
