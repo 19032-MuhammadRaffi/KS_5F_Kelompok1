@@ -17,3 +17,12 @@
   11. Anggun Lenteraningati (1910631170161)
   12. Rafly Danu Rizki (1910631170117)
   13. Rendityas Winardi (1910631170120)
+
+# Manual Instruksi
+- Login :
+1. Admin
+  Username : admin1
+  password : 123
+2. Staff 
+  Username : staff1
+  password : 123
