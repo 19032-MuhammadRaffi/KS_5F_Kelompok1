@@ -21,8 +21,8 @@
 # Manual Instruksi
 - Login :
 1. Admin
-  Username : admin1\n
+  Username : admin1 ;
   password : 123
 2. Staff 
-  Username : staff1\n
+  Username : staff1 ;
   password : 123
